@@ -143,23 +143,6 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 
 | Notebook da Etapa | Aula | Objetivo | Competências Desenvolvidas | Conteúdo Esperado |
 |-------------------|:----:|----------|----------------------------|-------------------|
-| **01_Exploracao.ipynb** | 1 | Compreender o problema e planejar o projeto. | Planejamento de projetos, organização do trabalho em equipe, exploração de dados e definição da arquitetura da solução. | Apresentação do problema, exploração do dataset oficial (EDA), definição da arquitetura proposta e planejamento das atividades do grupo. |
-| **02_Engenharia_Dados.ipynb** | 2 | Preparar os dados para utilização pelos modelos de IA. | Engenharia de Dados, ETL, preparação e documentação de pipelines. | Pipeline de ingestão, limpeza, transformação, tratamento de valores ausentes, engenharia de atributos (quando aplicável) e particionamento em treino, validação e teste. |
-| **03_Deep_Learning.ipynb** | 3 | Desenvolver o modelo baseline em Deep Learning. | Construção e treinamento de redes neurais, avaliação e análise de desempenho. | Implementação do modelo MLP baseline, treinamento, ajuste de hiperparâmetros, avaliação e análise dos resultados. |
-| **04_PNL.ipynb** | 4 | Desenvolver o módulo de Processamento de Linguagem Natural. | Pré-processamento textual, embeddings, classificação e avaliação de modelos de PNL. | Limpeza dos textos, geração de embeddings, treinamento do modelo, avaliação e análise dos resultados. |
-| **05_Visao_Computacional.ipynb** | 5 | Desenvolver o módulo de Visão Computacional. | Processamento de imagens, CNNs, Transfer Learning e avaliação de modelos visuais. | Preparação das imagens, treinamento utilizando CNN ou Transfer Learning, avaliação e análise dos resultados. |
-| **06_Modelo_Multimodal.ipynb** | 6 | Integrar os modelos de texto e imagem em uma solução única. | IA Multimodal, fusão de embeddings e integração entre modelos. | Implementação da estratégia de integração (Early Fusion, Late Fusion ou equivalente), treinamento do modelo multimodal e comparação com os modelos individuais. |
-| **07_Pipeline_Final.ipynb** | 7 | Consolidar a solução completa. | Engenharia de IA, organização de pipelines, documentação e preparação para implantação. | Pipeline completo de inferência, organização do repositório, documentação técnica, avaliação final da solução e análise das limitações e oportunidades de melhoria. |
-| **Projeto Final** | 8 | Apresentar e defender a solução desenvolvida. | Comunicação técnica, integração dos conhecimentos adquiridos e trabalho colaborativo. | Repositório GitHub organizado, todos os notebooks desenvolvidos durante o semestre, relatório técnico (até duas páginas), apresentação final (15 minutos) e demonstração da solução implementada. |
-
----
-
-## Entregas Esperadas
-
-Cada notebook representa uma etapa incremental da construção da solução. Ao final do semestre, todos os notebooks deverão compor um único repositório GitHub organizado, documentado e reproduzível.
-
-| Notebook da Etapa | Aula | Objetivo | Competências Desenvolvidas | Conteúdo Esperado |
-|-------------------|:----:|----------|----------------------------|-------------------|
 | **01_Exploracao.ipynb** | 1 | Planejar o projeto e compreender o problema. | Planejamento de projetos, organização do trabalho em equipe, exploração de dados e definição da arquitetura da solução. | Descrição do problema, utlização do [dataset](/materiais/dataset/README.md), análise exploratória dos dados (EDA), arquitetura inicial da solução e planejamento das atividades do grupo. |
 | **02_Engenharia_Dados.ipynb** | 2 | Preparar os dados para utilização pelos modelos de IA. | Engenharia de Dados, ETL, tratamento e preparação dos dados. | Pipeline de ingestão dos dados, limpeza, transformação, tratamento de valores ausentes, particionamento dos conjuntos de treino/validação/teste e documentação do processo. |
 | **03_Deep_Learning.ipynb** | 3 | Desenvolver o primeiro modelo baseado em Deep Learning. | Construção de redes neurais, treinamento supervisionado, avaliação de modelos e análise de desempenho. | Implementação do modelo baseline (MLP), treinamento, ajuste de hiperparâmetros, avaliação e discussão dos resultados obtidos. |
