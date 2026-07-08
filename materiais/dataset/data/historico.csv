@@ -1,0 +1,9 @@
+history_id,ticket_id,event_date,event_type,user,comment
+1,100001,2026-07-18 08:12:00,Abertura,Cliente,"Chamado aberto pelo portal."
+2,100001,2026-07-18 08:45:00,Atualização,Analista,"Solicitadas evidências adicionais."
+3,100001,2026-07-18 09:15:00,Imagem,Cliente,"Imagem anexada."
+4,100001,2026-07-18 11:02:00,Encerramento,Analista,"Problema resolvido após redefinição de credenciais."
+5,100002,2026-07-18 08:20:00,Abertura,Cliente,"Aplicação apresenta tela branca."
+6,100002,2026-07-18 09:40:00,Atualização,Analista,"Erro reproduzido em ambiente de testes."
+7,100003,2026-07-18 08:28:00,Abertura,Cliente,"Impressora não responde."
+8,100004,2026-07-18 08:42:00,Abertura,Cliente,"Sistema muito lento."

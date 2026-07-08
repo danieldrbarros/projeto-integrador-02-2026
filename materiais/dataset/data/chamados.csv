@@ -1,0 +1,5 @@
+ticket_id,customer_id,created_at,title,description,image_file,category,priority,status,sla_hours,resolution_hours,device,os,browser,department,city,state,historical_tickets,sentiment,target_category
+100001,2001,2026-07-18 08:10:00,Erro ao acessar sistema,"Após atualizar o sistema não consigo fazer login.",img_000001.jpg,Acesso,Alta,Fechado,8,3,Notebook,Windows 11,Chrome,Financeiro,São Paulo,SP,4,-0.61,Acesso
+100002,2002,2026-07-18 08:18:00,Tela em branco,"A aplicação abre mas permanece completamente branca.",img_000002.jpg,Software,Média,Em andamento,24,,Desktop,Ubuntu,Firefox,RH,Campinas,SP,1,-0.28,Software
+100003,2003,2026-07-18 08:25:00,Erro na impressão,"Não consigo imprimir os relatórios.",img_000001.jpg,Hardware,Baixa,Aberto,48,,Desktop,Windows 10,Edge,Financeiro,Santos,SP,0,0.15,Hardware
+100004,2004,2026-07-18 08:40:00,Lentidão,"Sistema extremamente lento durante todo o dia.",img_000002.jpg,Rede,Alta,Aberto,12,,Notebook,Ubuntu,Chrome,TI,Curitiba,PR,7,-0.74,Rede
