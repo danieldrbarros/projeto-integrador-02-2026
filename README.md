@@ -197,7 +197,6 @@ grupos/
 
 materiais/
 
-reunioes/
 ```
 
 ---

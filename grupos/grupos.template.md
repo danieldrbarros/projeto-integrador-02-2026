@@ -21,12 +21,8 @@
 
 | Etapa | Situação |
 |---------|----------|
-| Planejamento | ⬜ |
-| Big Data | ⬜ |
-| Deep Learning | ⬜ |
-| NLP | ⬜ |
-| Visão | ⬜ |
-| Integração | ⬜ |
+| Entrega 1 | [x] |
+| Entrega 2 | [] |
 
 ## Observações
 
