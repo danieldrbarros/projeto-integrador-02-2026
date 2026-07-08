@@ -118,7 +118,7 @@ Recomenda-se que os professores mantenham reuniões rápidas de alinhamento semp
 
 # Cronograma
 
-O Projeto Integrador será desenvolvido ao longo de **8 encontros presenciais**, acompanhando a evolução das disciplinas participantes. A cada aula, os estudantes desenvolverão uma nova etapa da solução, construindo incrementalmente um **Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências**.
+O Projeto Integrador será desenvolvido ao longo de **8 encontros remotos síncronos**, acompanhando a evolução das disciplinas participantes. A cada aula, os estudantes desenvolverão uma nova etapa da solução, construindo incrementalmente um **Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências**.
 
 Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professores no início do semestre.
 
@@ -160,7 +160,7 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 
 | Notebook da Etapa | Aula | Objetivo | Competências Desenvolvidas | Conteúdo Esperado |
 |-------------------|:----:|----------|----------------------------|-------------------|
-| **01_Exploracao.ipynb** | 1 | Planejar o projeto e compreender o problema. | Planejamento de projetos, organização do trabalho em equipe, exploração de dados e definição da arquitetura da solução. | Descrição do problema, escolha do dataset, análise exploratória dos dados (EDA), arquitetura inicial da solução e planejamento das atividades do grupo. |
+| **01_Exploracao.ipynb** | 1 | Planejar o projeto e compreender o problema. | Planejamento de projetos, organização do trabalho em equipe, exploração de dados e definição da arquitetura da solução. | Descrição do problema, utlização do [dataset](/materiais/dataset/README.md), análise exploratória dos dados (EDA), arquitetura inicial da solução e planejamento das atividades do grupo. |
 | **02_Engenharia_Dados.ipynb** | 2 | Preparar os dados para utilização pelos modelos de IA. | Engenharia de Dados, ETL, tratamento e preparação dos dados. | Pipeline de ingestão dos dados, limpeza, transformação, tratamento de valores ausentes, particionamento dos conjuntos de treino/validação/teste e documentação do processo. |
 | **03_Deep_Learning.ipynb** | 3 | Desenvolver o primeiro modelo baseado em Deep Learning. | Construção de redes neurais, treinamento supervisionado, avaliação de modelos e análise de desempenho. | Implementação do modelo baseline (MLP), treinamento, ajuste de hiperparâmetros, avaliação e discussão dos resultados obtidos. |
 | **04_NLP.ipynb** | 4 | Desenvolver o módulo de Processamento de Linguagem Natural. | Pré-processamento de textos, embeddings, classificação textual e avaliação de modelos NLP. | Limpeza e preparação dos textos, geração de embeddings, treinamento do modelo NLP, avaliação e análise dos resultados. |
@@ -190,22 +190,20 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 
 # Organização do Repositório
 
-```
-README.md
 
-grupos/
+- [README.md](README.md) onde temos as principais definições desse projeto.
 
-materiais/
+- Diretório [grupos/](/grupos/) onde temos o template e arquivos dos grupos.
 
-```
+- Diretório [materiais/](/materiais/) onde teremos os datasets, templates dos notebooks, etc.
 
 ---
 
 # Próximas Definições
 
-Antes do início das aulas recomenda-se definir:
+Antes do início das aulas recomenda-se definir/confirmar:
 
-- dataset oficial do projeto;
+- dataset oficial do projeto: sugestão inicial [aqui](/materiais/dataset/README.md);
 - template do repositório dos alunos;
 - template dos notebooks;
 - critérios de avaliação;
