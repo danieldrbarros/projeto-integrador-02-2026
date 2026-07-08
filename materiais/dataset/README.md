@@ -65,30 +65,6 @@ As imagens simulam:
 
 ---
 
-## Objetivo do Projeto
-
-Desenvolver um sistema capaz de:
-
-- classificar chamados;
-- prever prioridade;
-- gerar resumo automático;
-- integrar texto, imagens e atributos estruturados.
-
----
-
-## Tecnologias sugeridas
-
-- Pandas
-- NumPy
-- Scikit-Learn
-- PyTorch
-- TensorFlow
-- HuggingFace Transformers
-- OpenCV
-- Spark
-
----
-
 ## Observação
 
 Nem todas as colunas precisam ser utilizadas.
