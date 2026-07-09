@@ -1,6 +1,6 @@
 /* ==========================================================
    Projeto Integrador 02/2026 - Versão Final Corrigida
-   Estilo Otimizado para Pandoc + WeasyPrint
+   Estilo Otimizado para Pandoc + WeasyPrint (Padrão Acadêmico)
    ========================================================== */
 
 /* ==========================================================
@@ -42,9 +42,9 @@
     }
 }
 
-/* Remove cabeçalho/rodapé da primeira página (capa) */
+/* Remove completamente o cabeçalho e rodapé da capa */
 @page :first {
-    margin-top: 2cm;
+    margin: 2cm 2cm 2cm 2cm;
     @top-left { content: normal; border-bottom: none; }
     @top-right { content: normal; border-bottom: none; }
     @bottom-center { content: normal; }
@@ -55,61 +55,52 @@
    CORPO PRINCIPAL
    ========================================================== */
 body {
-    font-family: "Times New Roman", Times, serif; /* Fonte mais tradicional */
+    font-family: "Times New Roman", Times, serif;
     font-size: 11pt;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #222222;
 }
 
 /* ==========================================================
-   CAPA - CENTRALIZAÇÃO PERFEITA
+   CAPA - ALINHAMENTO E BALANCEAMENTO VISUAL
    ========================================================== */
 .cover-page {
     page-break-after: always;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    padding-top: 2cm;
+    height: 100%;
     box-sizing: border-box;
-    padding: 0 1cm;
-}
-
-.cover-content {
-    width: 100%;
-    max-width: 100%;
 }
 
 .cover-institution {
-    margin-bottom: 4.5cm;
+    margin-bottom: 4cm;
 }
 
 .cover-title-main {
-    font-size: 15pt;
+    font-size: 16pt;
     font-weight: bold;
     color: #0F4C81;
     letter-spacing: 1px;
-    margin: 4px 0;
+    margin: 5px 0;
 }
 
 .cover-title-secondary {
     font-size: 12pt;
-    font-weight: normal;
+    font-weight: bold;
     color: #333333;
-    margin: 3px 0;
+    margin: 4px 0;
 }
 
 .cover-title-tertiary {
-    font-size: 11.5pt;
-    font-weight: 600;
+    font-size: 13pt;
+    font-weight: bold;
     color: #0F4C81;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .cover-divider {
-    margin: 1.5cm auto;
-    width: 60%;
+    margin: 2cm auto;
+    width: 80%;
 }
 
 .cover-divider hr {
@@ -118,75 +109,89 @@ body {
 }
 
 .cover-project {
-    margin-bottom: 5.5cm;
+    margin-bottom: 5cm;
 }
 
 .cover-project-title {
-    font-size: 21pt;
+    font-size: 24pt;
     font-weight: bold;
     color: #0F4C81;
-    margin: 4px 0;
+    margin: 5px 0;
     line-height: 1.2;
 }
 
 .cover-project-subtitle {
-    font-size: 13.5pt;
-    font-weight: 500;
+    font-size: 14pt;
+    font-weight: bold;
     color: #555555;
-    margin-top: 15px;
+    margin-top: 20px;
     line-height: 1.4;
+    padding: 0 1cm;
 }
 
 .cover-footer {
-    font-size: 11pt;
-    color: #333333;
-    font-weight: 500;
+    font-size: 12pt;
+    color: #222222;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1cm;
+    width: 100%;
+    text-align: center;
 }
 
 .cover-footer p {
-    margin: 2px 0;
+    margin: 3px 0;
 }
 
 /* ==========================================================
-   SUMÁRIO - QUEBRAS ANTES E DEPOIS
+   SUMÁRIO (Pandoc gera como ID 'TOC' em maiúsculo)
    ========================================================== */
-#toc {
-    page-break-before: always;
-    page-break-after: always;
+#TOC {
+    page-break-before: always !important;
+    page-break-after: always !important;
     padding-top: 0.5cm;
 }
 
-#toc h1 {
+#TOC h1 {
     text-align: left;
     font-size: 18pt;
     color: #0F4C81;
     border-bottom: 2px solid #0F4C81;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    page-break-before: avoid;
 }
 
-#toc ul {
+#TOC ul {
     list-style: none;
     padding-left: 0;
 }
 
-#toc li {
-    padding: 4px 0;
-    font-size: 10.5pt;
+#TOC li {
+    padding: 6px 0;
+    font-size: 11pt;
+    font-weight: bold;
+    border-bottom: 1px dotted #dddddd;
 }
 
-#toc a {
+#TOC a {
     color: #0F4C81;
     text-decoration: none;
 }
 
-#toc ul ul {
+#TOC ul ul {
     padding-left: 20px;
+    margin-top: 4px;
+}
+
+#TOC ul ul li {
+    font-weight: normal;
+    font-size: 10.5pt;
+    border-bottom: none;
+    padding: 3px 0;
 }
 
 /* ==========================================================
-   TÍTULOS
+   TÍTULOS E DIRETRIZES DE QUEBRA
    ========================================================== */
 h1, h2, h3, h4 {
     color: #0F4C81;
@@ -198,22 +203,23 @@ h1 {
     font-size: 17pt;
     border-bottom: 2px solid #0F4C81;
     padding-bottom: 6px;
-    margin-top: 35px;
+    margin-top: 1.5cm;
     margin-bottom: 18px;
     page-break-before: always;
 }
 
-/* O primeiro h1 após o sumário não deve quebrar */
+/* Evita que o primeiro H1 logo após o sumário quebre página desnecessariamente */
 main > h1:first-of-type {
-    page-break-before: avoid;
+    page-break-before: avoid !important;
 }
 
 h2 {
-    font-size: 13.5pt;
+    font-size: 14pt;
     border-left: 4px solid #0F4C81;
     padding-left: 10px;
     margin-top: 25px;
     margin-bottom: 12px;
+    page-break-before: avoid;
 }
 
 h3 {
@@ -221,39 +227,38 @@ h3 {
     color: #1F5E99;
     margin-top: 20px;
     margin-bottom: 10px;
+    page-break-before: avoid;
 }
 
 p {
     text-align: justify;
+    text-indent: 1.25cm; /* Recuo parágrafo padrão acadêmico */
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-/* ==========================================================
-   QUEBRA DE PÁGINA ANTES DA SEÇÃO 5 (Arquitetura Geral)
-   ========================================================== */
-h1#arquitetura-geral,
-h1#arquitetura,
-h1#secao-5,
-h1#section-5,
-h2#arquitetura-geral,
-h2#arquitetura {
+/* Remove recuo de parágrafos que vem logo após títulos ou dentro de caixas */
+h1 + p, h2 + p, h3 + p, .cover-page p, blockquote p {
+    text-indent: 0;
+}
+
+/* Força quebra de página cirúrgica na Seção 5 */
+#arquitetura-geral, 
+#arquitetura, 
+h2#arquitetura-geral {
     page-break-before: always !important;
 }
 
 /* ==========================================================
-   TABELAS - CORREÇÃO PARA NÃO ULTRAPASSAREM MARGENS
+   TABELAS COMPACTAS (CORREÇÃO DE MARGEM DA SEÇÃO 3 E 7)
    ========================================================== */
 table {
     width: 100% !important;
     max-width: 100% !important;
-    table-layout: fixed !important;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 8.5pt; /* Reduzida para caber */
+    margin: 25px 0;
+    font-size: 9pt; /* Ajustado para legibilidade e encaixe */
     page-break-inside: avoid;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
 thead {
@@ -263,46 +268,54 @@ thead {
 }
 
 th, td {
-    border: 1px solid #b0b0b0;
-    padding: 5px 6px;
+    border: 1px solid #0F4C81; /* Borda visível e bem definida */
+    padding: 7px 8px;
     text-align: left;
     vertical-align: middle;
-    word-break: break-word;
 }
 
 th {
     font-weight: bold;
+    font-size: 9.5pt;
 }
 
 tbody tr:nth-child(even) {
     background-color: #f8fafd;
 }
 
-/* Largura específica para colunas da tabela da Seção 7 (Cronograma) 
-   Ajuste conforme necessário, mas usamos porcentagens aproximadas */
-table:not(:first-of-type) th:nth-child(1) { width: 8%; }
-table:not(:first-of-type) th:nth-child(2) { width: 12%; }
-table:not(:first-of-type) th:nth-child(3) { width: 18%; }
-table:not(:first-of-type) th:nth-child(4) { width: 35%; }
-table:not(:first-of-type) th:nth-child(5) { width: 12%; }
-table:not(:first-of-type) th:nth-child(6) { width: 15%; }
+/* Otimização de largura de colunas para a tabela de cronograma (Seção 7.1) */
+#cronograma-das-aulas + table th:nth-child(1),
+table:nth-of-type(2) th:nth-child(1) { width: 8%; text-align: center; }
+table:nth-of-type(2) th:nth-child(2) { width: 14%; }
+table:nth-of-type(2) th:nth-child(3) { width: 32%; }
+table:nth-of-type(2) th:nth-child(4) { width: 16%; }
+table:nth-of-type(2) th:nth-child(5) { width: 15%; }
+table:nth-of-type(2) th:nth-child(6) { width: 15%; }
+
+/* Otimização para a tabela de Entregas Esperadas (Seção 7.2) */
+#entregas-esperadas + table th:nth-child(1),
+table:nth-of-type(3) th:nth-child(1) { width: 20%; }
+table:nth-of-type(3) th:nth-child(2) { width: 8%; text-align: center; }
+table:nth-of-type(3) th:nth-child(3) { width: 18%; }
+table:nth-of-type(3) th:nth-child(4) { width: 24%; }
+table:nth-of-type(3) th:nth-child(5) { width: 30%; }
 
 /* ==========================================================
-   CÓDIGO, LISTAS, ETC
+   ELEMENTOS DE CÓDIGO E BLOCOS
    ========================================================== */
 code {
-    font-family: "Consolas", monospace;
+    font-family: "Consolas", Courier, monospace;
     background: #f4f6f8;
-    padding: 2px 5px;
+    padding: 2px 4px;
     border-radius: 3px;
-    font-size: 9pt;
+    font-size: 8.5pt;
     color: #c7254e;
 }
 
 pre {
     background: #f4f6f8;
     border-left: 4px solid #0F4C81;
-    padding: 12px;
+    padding: 10px;
     margin: 15px 0;
     border-radius: 4px;
     page-break-inside: avoid;
@@ -312,7 +325,7 @@ pre code {
     background: none;
     color: #222222;
     padding: 0;
-    font-size: 8.5pt;
+    font-size: 8pt;
 }
 
 blockquote {
@@ -326,10 +339,10 @@ blockquote {
 }
 
 ul, ol {
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 12px;
+    padding-left: 25px;
 }
 
-footer {
-    display: none;
+li {
+    margin-bottom: 4px;
 }
