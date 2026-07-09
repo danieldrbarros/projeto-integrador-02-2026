@@ -78,8 +78,6 @@ O objetivo é desenvolver um sistema capaz de:
 
 ---
 
-\newpage
-
 ## 5. Arquitetura Geral
 
 ![](assets/images/arquitetura.png)
