@@ -106,29 +106,29 @@ Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) of
 
 | Aula | Data | Objetivo | Professor(es) | Marco | Notebook |
 |:----:|:----------:|------------------|---------------|------------------|-------------------|
-| **1** | **18/07/2026** | Apresentar o Projeto Integrador, formar os grupos, apresentar o dataset oficial e organizar o ambiente de desenvolvimento. | Todos (preferencialmente) ou **DL + BD** | Planejamento do projeto | **01_Exploracao.ipynb** |
-| **2** | **25/07/2026** | Construir o pipeline de preparação dos dados (ETL, limpeza, transformação e particionamento). | **BD + DL** | Dados preparados | **02_Engenharia_Dados.ipynb** |
-| **3** | **08/08/2026** | Desenvolver o primeiro modelo de Deep Learning utilizando um MLP como baseline. | **DL** | Primeiro modelo treinado | **03_Deep_Learning.ipynb** |
-| **4** | **22/08/2026** | Desenvolver o módulo de Processamento de Linguagem Natural para análise das descrições textuais dos chamados. | **PLN + DL** | Modelo de PLN concluído | **04_PLN.ipynb** |
-| **5** | **05/09/2026** | Desenvolver o módulo de Visão Computacional para análise das imagens associadas aos chamados. | **VC + DL** | Modelo de VC concluído | **05_Visao_Computacional.ipynb** |
-| **6** | **19/09/2026** | Integrar os modelos de texto e imagem em um único modelo multimodal. | **DL + PLN + VC** | Modelo multimodal integrado | **06_Modelo_Multimodal.ipynb** |
-| **7** | **03/10/2026** | Consolidar a solução, implementar o pipeline de inferência e discutir aspectos de escalabilidade e implantação. | **BD + DL** | Sistema integrado e operacional | **07_Pipeline_Final.ipynb** |
-| **8** | **17/10/2026** | Apresentação dos projetos finais, demonstração da solução e avaliação integrada. | **Todos** | Projeto concluído | **Projeto Final** |
+| **1** | **18/07** | Apresentar, formar grupos, dataset e ambiente. | Todos / **DL+BD** | Planejamento | **01_Exploracao** |
+| **2** | **25/07** | Pipeline ETL (limpeza, transformação, partição). | **BD+DL** | Dados preparados | **02_Engenharia_Dados** |
+| **3** | **08/08** | Primeiro modelo DL (MLP baseline). | **DL** | Modelo treinado | **03_Deep_Learning** |
+| **4** | **22/08** | Módulo PLN para descrições textuais. | **PLN+DL** | PLN concluído | **04_PLN** |
+| **5** | **05/09** | Módulo VC para imagens anexadas. | **VC+DL** | VC concluído | **05_Visao_Computacional** |
+| **6** | **19/09** | Integrar modelos de texto e imagem (multimodal). | **DL+PLN+VC** | Multimodal integrado | **06_Modelo_Multimodal** |
+| **7** | **03/10** | Consolidar, pipeline de inferência, escalabilidade. | **BD+DL** | Sistema integrado | **07_Pipeline_Final** |
+| **8** | **17/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto Final** |
 
 ### 7.2. Entregas Esperadas
 
 Cada notebook representa uma etapa incremental da construção da solução. Ao final do semestre, todos os notebooks deverão compor um único repositório GitHub organizado, documentado e reproduzível.
 
-| Notebook da Etapa | Aula | Objetivo | Competências | Conteúdo |
-|-------------------|:----:|----------|----------------------------|-------------------|
-| **01_Exploracao.ipynb** | 1 | Planejar o projeto e compreender o problema. | Planejamento de projetos, organização do trabalho em equipe, exploração de dados e definição da arquitetura da solução. | Descrição do problema, utlização do [dataset](/materiais/dataset/README.md), análise exploratória dos dados (EDA), arquitetura inicial da solução e planejamento das atividades do grupo. |
-| **02_Engenharia_Dados.ipynb** | 2 | Preparar os dados para utilização pelos modelos de IA. | Engenharia de Dados, ETL, tratamento e preparação dos dados. | Pipeline de ingestão dos dados, limpeza, transformação, tratamento de valores ausentes, particionamento dos conjuntos de treino/validação/teste e documentação do processo. |
-| **03_Deep_Learning.ipynb** | 3 | Desenvolver o primeiro modelo baseado em Deep Learning. | Construção de redes neurais, treinamento supervisionado, avaliação de modelos e análise de desempenho. | Implementação do modelo baseline (MLP), treinamento, ajuste de hiperparâmetros, avaliação e discussão dos resultados obtidos. |
-| **04_PLN.ipynb** | 4 | Desenvolver o módulo de Processamento de Linguagem Natural. | Pré-processamento de textos, embeddings, classificação textual e avaliação de modelos PLN. | Limpeza e preparação dos textos, geração de embeddings, treinamento do modelo PLN, avaliação e análise dos resultados. |
-| **05_Visao_Computacional.ipynb** | 5 | Desenvolver o módulo de Visão Computacional. | Processamento de imagens, CNNs, Transfer Learning e avaliação de modelos visuais. | Preparação das imagens, treinamento utilizando CNN ou Transfer Learning, avaliação do modelo e análise dos resultados. |
-| **06_Modelo_Multimodal.ipynb** | 6 | Integrar os modelos de texto e imagem em uma única solução inteligente. | Modelagem multimodal, fusão de embeddings, integração entre modelos e comparação de arquiteturas. | Estratégia de integração (Early Fusion, Late Fusion ou similar), treinamento do modelo multimodal, avaliação comparativa e discussão dos ganhos obtidos. |
-| **07_Pipeline_Final.ipynb** | 7 | Consolidar a solução desenvolvida pelo grupo. | Engenharia de IA, organização de pipelines, documentação técnica e preparação para implantação. | Pipeline completo de inferência, organização do projeto, documentação técnica, avaliação final da solução e análise das limitações e oportunidades de melhoria. |
-| **Projeto Final** | 8 | Apresentar e defender a solução desenvolvida pelo grupo. | Comunicação técnica, integração de conhecimentos, trabalho colaborativo e apresentação de resultados. | Repositório GitHub organizado, todos os notebooks desenvolvidos durante o semestre, relatório técnico (até duas páginas), apresentação final (15 minutos) e demonstração da solução implementada. |
+| Notebook | Aula | Objetivo | Competências | Conteúdo |
+|----------|:----:|----------|----------------------------|-------------------|
+| **01_Exploracao** | 1 | Planejar e<br>compreender o<br>problema. | Planejamento, trabalho em equipe, EDA e arquitetura. | Descrição, [dataset](/materiais/dataset/README.md), EDA, arquitetura inicial e planejamento. |
+| **02_Engenharia_Dados** | 2 | Preparar dados<br>para os modelos. | Engenharia de Dados, ETL e preparação. | Ingestão, limpeza, transformação, partição treino/validação/teste e documentação. |
+| **03_Deep_Learning** | 3 | Desenvolver o<br>primeiro modelo DL. | Redes neurais, treino supervisionado, avaliação. | MLP baseline, treino, ajuste de hiperparâmetros, avaliação e discussão. |
+| **04_PLN** | 4 | Desenvolver o<br>módulo PLN. | Pré‑processamento de textos, embeddings, classificação. | Limpeza, embeddings, treino do modelo PLN, avaliação. |
+| **05_Visao_Computacional** | 5 | Desenvolver o<br>módulo VC. | Processamento de imagens, CNNs, Transfer Learning. | Preparação das imagens, CNN/Transfer Learning, avaliação. |
+| **06_Modelo_Multimodal** | 6 | Integrar texto e<br>imagem em uma<br>solução única. | Modelagem multimodal, fusão de embeddings, comparação. | Early/Late Fusion, treino multimodal, avaliação comparativa e discussão. |
+| **07_Pipeline_Final** | 7 | Consolidar a<br>solução do grupo. | Engenharia de IA, pipelines, documentação, implantação. | Pipeline de inferência, organização, documentação, avaliação final e limitações. |
+| **Projeto Final** | 8 | Apresentar e<br>defender a<br>solução. | Comunicação técnica, integração, colaboração, apresentação. | Repositório, notebooks, relatório técnico (2p), apresentação (15 min) e demo. |
 
 ---
 
