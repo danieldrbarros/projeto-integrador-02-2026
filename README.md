@@ -10,14 +10,14 @@ Todo o desenvolvimento deverá ser realizado em equipes utilizando GitHub como f
 
 |  |  |
 |------------|---------|
-| **Disciplina** | Projeto Integrador II: Aplicação de Deep Learning |
-| **Curso** | Pós-Graduação em Inteligência Artificial |
-| **Instituição** | PUC-SP |
-| **Carga horária** | 40 horas |
-| **Equipe** | 1 a 4 alunos |
-| **Repositório** | Código versionado no GitHub |
-| **Ferramentas** | Python, Jupyter, TensorFlow, Scikit-learn |
-| **Entrega final** | Apresentação do projeto + código documentado |
+| **Disciplina**: | Projeto Integrador II: Aplicação de Deep Learning |
+| **Curso**: | Pós-Graduação em Inteligência Artificial |
+| **Instituição**: | PUC-SP |
+| **Carga horária**: | 40 horas |
+| **Equipe**: | 1 a 4 alunos |
+| **Repositório**: | Código versionado no GitHub |
+| **Ferramentas**: | Python, Jupyter, TensorFlow, Scikit-learn |
+| **Entrega final**: | Apresentação do projeto + código documentado |
 
 ---
 
