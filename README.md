@@ -244,24 +244,31 @@ Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos 
 
 ## 15. Referências Bibliográficas
 
-[1] GÉRON, Aurélien. *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow*. 2. ed. Sebastopol: O'Reilly Media, 2019.
+[1] ZHANG, Aston et al. Dive into Deep Learning. 2024. Disponível em: https://d2l.ai/index.html. Acesso em: 17 set.2025.
 
-[2] MÜELLER, Andreas C.; GUIDO, Sarah. *Introduction to Machine Learning with Python: A Guide for Data Scientists*. Sebastopol: O'Reilly Media, 2016.
+[2] CHOLLET, François. Deep Learning with Python. Greenwich: Manning Publications, 2018.
 
-[3] MCKINNEY, Wes. *Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython*. 2. ed. Sebastopol: O'Reilly Media, 2017.
+[3] BIRD, Steven; KLEIN, Ewan; LOPER, Edward. Natural Language Processing with Python. Sebastopol: O’Reilly
+Media, 2009.
 
-[4] CHOLLET, François. *Deep Learning with Python*. 2. ed. Nova York: Manning Publications, 2021.
+[4] SILGE, Julia; ROBINSON, David. Text Mining with R. Sebastopol: O’Reilly Media, 2017.
 
-[5] BURKOV, Andriy. *The Hundred-Page Machine Learning Book*. Trois-Rivières: Burkov, 2019.
+[5] FORSYTH, David A.; PONCE, Jean. Computer Vision: A Modern Approach. 2. ed. Boston: Pearson, 2011.
 
-[6] HASTIE, Trevor; TIBSHIRANI, Robert; FRIEDMAN, Jerome. *The Elements of Statistical Learning*. 2. ed. Nova York: Springer, 2009.
+[6] SZELISKI, Richard. Computer Vision: Algorithms and Applications. New York: Springer, 2010.
 
-[7] VASWANI, Ashish et al. "Attention Is All You Need". In: *Advances in Neural Information Processing Systems*, 2017.
+[7] CHAMBERS, Bill; ZAHARIA, Matei. Spark: The Definitive Guide: Big Data Processing Made Simple. Sebastopol:
+O’Reilly Media, 2018.
 
-[8] LAKSHMANAN, V.; ROBINSON, S.; MUNN, M. *Machine Learning Design Patterns*. Sebastopol: O'Reilly Media, 2020.
+[8] LAKSHMANAN, Valliappa; ROBINSON, Sara; MUNN, Michael. Machine Learning Design Patterns: Solutions to
+Common Challenges in Machine Learning. Sebastopol: O’Reilly Media, 2020.
 
-[9] PEDREGOSA, F. et al. Scikit-learn: Machine Learning in Python. *Journal of Machine Learning Research*, v. 12, p. 2825–2830, 2011.
+[9] TREVEIL, Mark et al. Introducing MLOps: How to Scale Machine Learning in the Enterprise. Sebastopol: O’Reilly
+Media, 2020.
 
-[10] ABADI, Martín et al. TensorFlow: A System for Large-Scale Machine Learning. In: *12th USENIX Symposium on Operating Systems Design and Implementation*, 2016.
+[10] GÉRON, Aurélien. Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow. 2. ed. Sebastopol:
+O’Reilly Media, 2019.
+
+[11] ROSEBROCK, Adrian. Deep Learning for Computer Vision with Python. PyImageSearch, 2017.
 
 ---
