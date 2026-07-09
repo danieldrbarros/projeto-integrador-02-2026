@@ -7,8 +7,8 @@ on:
       - master
     paths:
       - "README.md"
-      - "docs/style.css"
-      - "docs/template.html"
+      - "assets/docs/style.css"
+      - "assets/docs/template.html"
       - ".github/workflows/build-pdf.yml"
   workflow_dispatch:
 
@@ -56,8 +56,8 @@ jobs:
               --toc-depth=3 \
               --metadata title="Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências" \
               --metadata date="$(date '+%Y')" \
-              --template docs/template.html \
-              --css docs/style.css \
+              --template assets/docs/template.html \
+              --css assets/docs/style.css \
               -o README.html
 
       - name: Convert HTML to PDF
