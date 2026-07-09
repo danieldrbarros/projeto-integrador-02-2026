@@ -1,13 +1,3 @@
-# Projeto Integrador 02/2026
-## Pós-Graduação em Inteligência Artificial
-
-![GitHub](https://img.shields.io/badge/status-em%20desenvolvimento-blue)
-![Python](https://img.shields.io/badge/Python-3.11+-yellow)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
-![License](https://img.shields.io/badge/license-Acad%C3%AAmico-green)
-
----
-
 ## 1. Sobre o Projeto
 
 O Projeto Integrador tem como objetivo agregar os conhecimentos desenvolvidos nas disciplinas da Pós-Graduação em Inteligência Artificial por meio da construção de uma solução baseada em Inteligência Artificial aplicada a um problema real.

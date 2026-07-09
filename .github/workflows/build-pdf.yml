@@ -53,7 +53,7 @@ jobs:
               --toc \
               --toc-depth=3 \
               --metadata title="Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências" \
-              --metadata date="$(date '+%d/%m/%Y')" \
+              --metadata date="$(date '+%Y')" \
               --template docs/template.html \
               --css docs/style.css \
               -o README.html
