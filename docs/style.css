@@ -1,14 +1,14 @@
 /* ==========================================================
-   Projeto Integrador 02/2026
-   Estilo para geração automática do README.pdf via WeasyPrint
+   Projeto Integrador 02/2026 - Versão Corrigida
+   Estilo Otimizado para Pandoc + WeasyPrint
    ========================================================== */
 
 /* ==========================================================
-   CONFIGURAÇÕES DA PÁGINA (Padrão A4)
+   CONFIGURAÇÕES DA PÁGINA
    ========================================================== */
 @page {
     size: A4;
-    margin: 3cm 2cm 2cm 2cm; /* Aumentado o topo para não sobrepor o cabeçalho */
+    margin: 3.5cm 2cm 2.5cm 2cm; /* Margem superior generosa para o cabeçalho */
 
     @top-left {
         content: "Projeto Integrador II — PUC-SP";
@@ -45,7 +45,7 @@
     }
 }
 
-/* Remove cabeçalho e rodapé da primeira página (Capa) */
+/* Remove explicitamente o cabeçalho/rodapé da Capa (Primeira Página) */
 @page :first {
     margin-top: 2cm;
     @top-left { content: normal; border-bottom: none; }
@@ -65,44 +65,54 @@ body {
 }
 
 /* ==========================================================
-   CAPA - CORRIGIDA (Sem Flexbox para compatibilidade WeasyPrint)
+   CAPA - ALINHAMENTO ABSOLUTO (Sem quebras ou flexbox)
    ========================================================== */
 .cover-page {
     page-break-after: always;
     height: 100%;
+    text-align: center !important;
+    display: block;
     box-sizing: border-box;
-    padding-top: 2cm;
-    text-align: center;
+}
+
+.cover-content {
+    width: 100%;
+    text-align: center !important;
 }
 
 .cover-institution {
-    margin-bottom: 5cm;
+    margin-top: 1cm;
+    margin-bottom: 4.5cm;
+    text-align: center !important;
 }
 
 .cover-title-main {
-    font-size: 16pt;
+    font-size: 15pt;
     font-weight: bold;
     color: #0F4C81;
     letter-spacing: 1px;
-    margin: 5px 0;
+    margin: 4px 0;
+    text-align: center !important;
 }
 
 .cover-title-secondary {
-    font-size: 13pt;
+    font-size: 12pt;
     font-weight: normal;
     color: #333333;
-    margin: 4px 0;
+    margin: 3px 0;
+    text-align: center !important;
 }
 
 .cover-title-tertiary {
-    font-size: 12pt;
+    font-size: 11.5pt;
     font-weight: 600;
     color: #0F4C81;
-    margin-top: 15px;
+    margin-top: 12px;
+    text-align: center !important;
 }
 
 .cover-divider {
-    margin: 2cm auto;
+    margin: 1.5cm auto;
     width: 60%;
 }
 
@@ -112,53 +122,59 @@ body {
 }
 
 .cover-project {
-    margin-bottom: 6cm;
+    margin-bottom: 5.5cm;
+    text-align: center !important;
 }
 
 .cover-project-title {
-    font-size: 22pt;
+    font-size: 21pt;
     font-weight: bold;
     color: #0F4C81;
-    margin: 5px 0;
+    margin: 4px 0;
     line-height: 1.2;
+    text-align: center !important;
 }
 
 .cover-project-subtitle {
-    font-size: 14pt;
+    font-size: 13.5pt;
     font-weight: 500;
     color: #555555;
     margin-top: 15px;
     line-height: 1.4;
+    text-align: center !important;
 }
 
 .cover-footer {
-    font-size: 12pt;
+    font-size: 11pt;
     color: #333333;
     font-weight: 500;
+    text-align: center !important;
+    width: 100%;
 }
 
 .cover-footer p {
-    margin: 3px 0;
-    text-align: center;
+    margin: 2px 0;
+    text-align: center !important;
 }
 
 /* ==========================================================
-   SUMÁRIO (TOC)
+   SUMÁRIO (Sem quebras forçadas antes/depois por padrão)
    ========================================================== */
 #toc {
-    page-break-before: always;
-    page-break-after: always;
-    padding-top: 1cm;
+    padding-top: 0.5cm;
+    margin-bottom: 1.5cm;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
 }
 
 #toc h1 {
     text-align: left;
-    font-size: 20pt;
+    font-size: 18pt;
     color: #0F4C81;
     border-bottom: 2px solid #0F4C81;
-    padding-bottom: 8px;
-    margin-bottom: 30px;
-    page-break-before: avoid;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    page-break-before: avoid !important;
 }
 
 #toc ul {
@@ -167,8 +183,8 @@ body {
 }
 
 #toc li {
-    padding: 6px 0;
-    font-size: 11pt;
+    padding: 4px 0;
+    font-size: 10.5pt;
 }
 
 #toc a {
@@ -176,81 +192,86 @@ body {
     text-decoration: none;
 }
 
-/* Níveis do sumário */
 #toc ul ul {
     padding-left: 20px;
 }
 
-#toc ul ul li {
-    font-size: 10pt;
-}
-
 /* ==========================================================
-   ELEMENTOS DE TEXTO E TÍTULOS
+   TÍTULOS E ELEMENTOS GERAIS
    ========================================================== */
 h1, h2, h3, h4 {
     color: #0F4C81;
     font-weight: bold;
-    page-break-after: avoid; /* Impede título sozinho no fim da página */
+    page-break-after: avoid; 
 }
 
+/* Títulos h1 normais quebram página, exceto o primeiro pós-sumário */
 h1 {
-    font-size: 18pt;
+    font-size: 17pt;
     border-bottom: 2px solid #0F4C81;
     padding-bottom: 6px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    page-break-before: always; /* Cada seção principal começa em nova página */
+    margin-top: 35px;
+    margin-bottom: 18px;
+    page-break-before: always;
 }
 
-/* Evita quebra na primeira seção logo após o sumário */
 main > h1:first-of-type {
-    page-break-before: avoid;
+    page-break-before: avoid !important;
 }
 
 h2 {
-    font-size: 14pt;
+    font-size: 13.5pt;
     border-left: 4px solid #0F4C81;
     padding-left: 10px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 12pt;
-    color: #1F5E99;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 12px;
 }
 
 p {
     text-align: justify;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 /* ==========================================================
-   TABELAS (Otimizadas para não cortar)
+   FORÇAR REAFAFE DE PÁGINA NA SEÇÃO 5
+   Como o Pandoc cria IDs automáticos com base no nome do título,
+   mapeamos as duas possibilidades comuns (em português ou inglês):
+   ========================================================== */
+#arquitetura-geral, 
+#arquitetura,
+#secao-5,
+#section-5 {
+    page-break-before: always !important;
+}
+
+/* ==========================================================
+   TABELAS ANCORADAS (Correção para a seção 7 / Margens Extensas)
    ========================================================== */
 table {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: fixed !important; /* Força respeitar estritamente a margem */
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 9.5pt;
+    font-size: 9pt; /* Leve redução para caber em cenários densos */
     page-break-inside: avoid;
 }
 
 thead {
-    display: table-header-group; /* Repete o cabeçalho se a tabela quebrar */
+    display: table-header-group;
     background: #0F4C81;
     color: white;
 }
 
 th, td {
     border: 1px solid #b0b0b0;
-    padding: 8px 10px;
+    padding: 6px 8px;
     text-align: left;
     vertical-align: middle;
+    word-break: break-word !important; /* Impede estouro de string longa */
 }
 
 th {
@@ -261,26 +282,23 @@ tbody tr:nth-child(even) {
     background-color: #f8fafd;
 }
 
-/* Removemos a fixação de larguras por coluna genérica (1º, 2º filho) 
-   para deixar o Pandoc/Weasyprint auto-ajustar conforme o markdown */
-
 /* ==========================================================
-   CÓDIGO E BLOCKQUOTES
+   CÓDIGO, LISTAS E AFINS
    ========================================================== */
 code {
     font-family: "Consolas", monospace;
     background: #f4f6f8;
     padding: 2px 5px;
     border-radius: 3px;
-    font-size: 9.5pt;
-    color: #c7254e; /* Cor clássica de destaque para código inline */
+    font-size: 9pt;
+    color: #c7254e;
 }
 
 pre {
     background: #f4f6f8;
     border-left: 4px solid #0F4C81;
     padding: 12px;
-    margin: 18px 0;
+    margin: 15px 0;
     border-radius: 4px;
     page-break-inside: avoid;
 }
@@ -289,7 +307,7 @@ pre code {
     background: none;
     color: #222222;
     padding: 0;
-    font-size: 9pt;
+    font-size: 8.5pt;
 }
 
 blockquote {
@@ -302,31 +320,11 @@ blockquote {
     page-break-inside: avoid;
 }
 
-/* ==========================================================
-   IMAGENS E ELEMENTOS GERAIS
-   ========================================================== */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    page-break-inside: avoid;
-}
-
 ul, ol {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding-left: 20px;
 }
 
-li {
-    margin-bottom: 4px;
-}
-
-strong {
-    color: #0F4C81;
-}
-
-/* Remove a duplicidade do rodapé estático no HTML já que o @page cuida disso */
 footer {
     display: none;
 }
