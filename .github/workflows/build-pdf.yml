@@ -1,0 +1,68 @@
+name: Build README PDF
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "README.md"
+      - "docs/style.css"
+      - ".github/workflows/build-pdf.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Pandoc
+        uses: pandoc/actions/setup@v1
+
+      - name: Install WeasyPrint
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            fonts-dejavu \
+            libpango-1.0-0 \
+            libcairo2 \
+            libgdk-pixbuf-2.0-0
+
+          python -m pip install --upgrade pip
+          pip install weasyprint
+
+      - name: Generate HTML
+        run: |
+          pandoc README.md \
+              --standalone \
+              --toc \
+              --toc-depth=2 \
+              --metadata title="Projeto Integrador 02/2026" \
+              --metadata date="$(date '+%d/%m/%Y')" \
+              --template docs/template.html \
+              --css docs/style.css \
+              -o README.html                  
+
+      - name: Convert HTML to PDF
+        run: |
+          weasyprint README.html README.pdf
+
+      - name: Commit README.pdf
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: update README.pdf"
+          file_pattern: README.pdf
