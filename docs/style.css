@@ -1,5 +1,5 @@
 /* ==========================================================
-   Projeto Integrador 02/2026 - Versão Final Corrigida
+   Projeto Integrador 02/2026 - Versão Final com Correções
    Estilo Otimizado para Pandoc + WeasyPrint (Padrão Acadêmico)
    ========================================================== */
 
@@ -62,14 +62,22 @@ body {
 }
 
 /* ==========================================================
-   CAPA - ALINHAMENTO E BALANCEAMENTO VISUAL
+   CAPA - CENTRALIZAÇÃO PERFEITA (FLEXBOX)
    ========================================================== */
 .cover-page {
-    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
-    padding-top: 2cm;
-    height: 100%;
+    padding: 0 1cm;
     box-sizing: border-box;
+    page-break-after: always;
+}
+
+.cover-content {
+    width: 100%;
 }
 
 .cover-institution {
@@ -86,21 +94,21 @@ body {
 
 .cover-title-secondary {
     font-size: 12pt;
-    font-weight: bold;
+    font-weight: normal;
     color: #333333;
     margin: 4px 0;
 }
 
 .cover-title-tertiary {
     font-size: 13pt;
-    font-weight: bold;
+    font-weight: 600;
     color: #0F4C81;
     margin-top: 15px;
 }
 
 .cover-divider {
-    margin: 2cm auto;
-    width: 80%;
+    margin: 1.5cm auto;
+    width: 60%;
 }
 
 .cover-divider hr {
@@ -109,7 +117,7 @@ body {
 }
 
 .cover-project {
-    margin-bottom: 5cm;
+    margin-bottom: 4cm;
 }
 
 .cover-project-title {
@@ -122,21 +130,18 @@ body {
 
 .cover-project-subtitle {
     font-size: 14pt;
-    font-weight: bold;
+    font-weight: 500;
     color: #555555;
     margin-top: 20px;
     line-height: 1.4;
-    padding: 0 1cm;
+    padding: 0 0.5cm;
 }
 
 .cover-footer {
+    margin-top: auto; /* empurra para o fundo */
     font-size: 12pt;
     color: #222222;
-    font-weight: bold;
-    position: absolute;
-    bottom: 1cm;
-    width: 100%;
-    text-align: center;
+    font-weight: 500;
 }
 
 .cover-footer p {
@@ -144,46 +149,47 @@ body {
 }
 
 /* ==========================================================
-   SUMÁRIO (Pandoc gera como ID 'TOC' em maiúsculo)
+   SUMÁRIO (ID 'toc' – minúsculo, compatível com template)
    ========================================================== */
-#TOC {
+#toc {
     page-break-before: always !important;
     page-break-after: always !important;
     padding-top: 0.5cm;
 }
 
-#TOC h1 {
+#toc h1 {
     text-align: left;
     font-size: 18pt;
     color: #0F4C81;
     border-bottom: 2px solid #0F4C81;
     padding-bottom: 6px;
     margin-bottom: 20px;
+    page-break-before: avoid;
 }
 
-#TOC ul {
+#toc ul {
     list-style: none;
     padding-left: 0;
 }
 
-#TOC li {
+#toc li {
     padding: 6px 0;
     font-size: 11pt;
     font-weight: bold;
     border-bottom: 1px dotted #dddddd;
 }
 
-#TOC a {
+#toc a {
     color: #0F4C81;
     text-decoration: none;
 }
 
-#TOC ul ul {
+#toc ul ul {
     padding-left: 20px;
     margin-top: 4px;
 }
 
-#TOC ul ul li {
+#toc ul ul li {
     font-weight: normal;
     font-size: 10.5pt;
     border-bottom: none;
@@ -232,73 +238,105 @@ h3 {
 
 p {
     text-align: justify;
-    text-indent: 1.25cm; /* Recuo parágrafo padrão acadêmico */
+    text-indent: 1.25cm; /* Recuo padrão acadêmico */
     margin-top: 0;
     margin-bottom: 12px;
 }
 
-/* Remove recuo de parágrafos que vem logo após títulos ou dentro de caixas */
-h1 + p, h2 + p, h3 + p, .cover-page p, blockquote p {
+/* Remove recuo de parágrafos especiais (capa, sumário, tabelas, blocos) */
+.cover-page p,
+#toc p,
+table p,
+blockquote p,
+h1 + p, h2 + p, h3 + p {
     text-indent: 0;
 }
 
-/* Força quebra de página cirúrgica na Seção 5 */
-#arquitetura-geral, 
-#arquitetura, 
+/* ==========================================================
+   QUEBRA DE PÁGINA CIRÚRGICA NA SEÇÃO 5 (Arquitetura)
+   ========================================================== */
+#arquitetura-geral,
+#arquitetura,
 h2#arquitetura-geral {
     page-break-before: always !important;
 }
 
 /* ==========================================================
-   TABELAS COMPACTAS (CORREÇÃO DE MARGEM DA SEÇÃO 3 E 7)
+   TABELAS - CORREÇÃO DE MARGENS E BORDAS
    ========================================================== */
 table {
     width: 100% !important;
     max-width: 100% !important;
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 9pt; /* Ajustado para legibilidade e encaixe */
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    margin: 20px 0;
+    font-size: 8.5pt; /* Compacta para caber */
     page-break-inside: avoid;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
+/* Garante bordas visíveis em todas as células */
+th, td {
+    border: 1px solid #0F4C81 !important;
+    padding: 5px 6px;
+    text-align: left;
+    vertical-align: middle;
+    word-break: break-word;
+}
+
+/* Cabeçalho das tabelas com fundo azul */
 thead {
     display: table-header-group;
     background: #0F4C81;
     color: white;
 }
 
-th, td {
-    border: 1px solid #0F4C81; /* Borda visível e bem definida */
-    padding: 7px 8px;
-    text-align: left;
-    vertical-align: middle;
-}
-
 th {
     font-weight: bold;
-    font-size: 9.5pt;
+    font-size: 8.5pt;
 }
 
+/* Linhas alternadas para melhor legibilidade */
 tbody tr:nth-child(even) {
     background-color: #f8fafd;
 }
 
-/* Otimização de largura de colunas para a tabela de cronograma (Seção 7.1) */
-#cronograma-das-aulas + table th:nth-child(1),
-table:nth-of-type(2) th:nth-child(1) { width: 8%; text-align: center; }
-table:nth-of-type(2) th:nth-child(2) { width: 14%; }
-table:nth-of-type(2) th:nth-child(3) { width: 32%; }
-table:nth-of-type(2) th:nth-child(4) { width: 16%; }
-table:nth-of-type(2) th:nth-child(5) { width: 15%; }
-table:nth-of-type(2) th:nth-child(6) { width: 15%; }
+/* 
+   Distribuição genérica de larguras para tabelas com 5 colunas 
+   (ex.: Entregas Esperadas). Se a tabela tiver 6 colunas (Cronograma),
+   o ajuste pode ser feito via classes no Markdown ou com seletores
+   baseados na ordem. Para simplificar, usamos uma abordagem genérica:
+   - Primeira coluna: 18%
+   - Segunda: 10%
+   - Terceira: 22%
+   - Quarta: 24%
+   - Quinta: 26%
+   Ajuste os percentuais conforme necessário.
+*/
+table th:nth-child(1), table td:nth-child(1) { width: 18%; }
+table th:nth-child(2), table td:nth-child(2) { width: 10%; text-align: center; }
+table th:nth-child(3), table td:nth-child(3) { width: 22%; }
+table th:nth-child(4), table td:nth-child(4) { width: 24%; }
+table th:nth-child(5), table td:nth-child(5) { width: 26%; }
 
-/* Otimização para a tabela de Entregas Esperadas (Seção 7.2) */
-#entregas-esperadas + table th:nth-child(1),
-table:nth-of-type(3) th:nth-child(1) { width: 20%; }
-table:nth-of-type(3) th:nth-child(2) { width: 8%; text-align: center; }
-table:nth-of-type(3) th:nth-child(3) { width: 18%; }
-table:nth-of-type(3) th:nth-child(4) { width: 24%; }
-table:nth-of-type(3) th:nth-child(5) { width: 30%; }
+/* Se a tabela tiver 6 colunas (Cronograma), sobrescreva com estas larguras */
+table th:nth-child(6), table td:nth-child(6) {
+    width: 15%; /* A sexta coluna só existirá se houver 6 */
+}
+/* E redistribua as demais quando houver 6 colunas */
+table th:nth-child(1):nth-last-child(6),
+table td:nth-child(1):nth-last-child(6) { width: 8%; }
+table th:nth-child(2):nth-last-child(5),
+table td:nth-child(2):nth-last-child(5) { width: 14%; }
+table th:nth-child(3):nth-last-child(4),
+table td:nth-child(3):nth-last-child(4) { width: 30%; }
+table th:nth-child(4):nth-last-child(3),
+table td:nth-child(4):nth-last-child(3) { width: 16%; }
+table th:nth-child(5):nth-last-child(2),
+table td:nth-child(5):nth-last-child(2) { width: 17%; }
+table th:nth-child(6):nth-last-child(1),
+table td:nth-child(6):nth-last-child(1) { width: 15%; }
 
 /* ==========================================================
    ELEMENTOS DE CÓDIGO E BLOCOS
@@ -345,4 +383,8 @@ ul, ol {
 
 li {
     margin-bottom: 4px;
+}
+
+footer {
+    display: none;
 }
