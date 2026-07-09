@@ -43,7 +43,7 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 | **BD** | Big Data e Engenharia de Dados | Daniel Carvalho |
 | **PLN** | Processamento de Linguagem Natural | Gabriel Santos |
 | **VC** | Visão Computacional | Silvio Stanzani |
-| **DL** | Fundamentos de Deep Learning | [Daniel Barros](https://github.com/danieldrbarros) |
+| **DL** | Fundamentos de Deep Learning | Daniel Barros |
 
 ---
 
@@ -73,6 +73,8 @@ O objetivo é desenvolver um sistema capaz de:
 \newpage
 
 ## 5. Arquitetura Geral
+
+![](assets/images/arquitetura.png)
 
 ```text
                          Chamados
