@@ -1,14 +1,14 @@
 /* ==========================================================
-   Projeto Integrador 02/2026 - Versão Corrigida
+   Projeto Integrador 02/2026 - Versão Final Corrigida
    Estilo Otimizado para Pandoc + WeasyPrint
    ========================================================== */
 
 /* ==========================================================
-   CONFIGURAÇÕES DA PÁGINA
+   CONFIGURAÇÕES DA PÁGINA (A4)
    ========================================================== */
 @page {
     size: A4;
-    margin: 3.5cm 2cm 2.5cm 2cm; /* Margem superior generosa para o cabeçalho */
+    margin: 3.5cm 2cm 2.5cm 2cm;
 
     @top-left {
         content: "Projeto Integrador II — PUC-SP";
@@ -19,7 +19,6 @@
         padding-bottom: 5px;
         border-bottom: 1px solid #0F4C81;
     }
-
     @top-right {
         content: "Especialização em IA";
         font-size: 8pt;
@@ -29,14 +28,12 @@
         padding-bottom: 5px;
         border-bottom: 1px solid #0F4C81;
     }
-
     @bottom-center {
         content: "Projeto Integrador II — PUC-SP";
         font-size: 7pt;
         color: #999999;
         letter-spacing: 0.3px;
     }
-
     @bottom-right {
         content: counter(page);
         font-size: 8.5pt;
@@ -45,7 +42,7 @@
     }
 }
 
-/* Remove explicitamente o cabeçalho/rodapé da Capa (Primeira Página) */
+/* Remove cabeçalho/rodapé da primeira página (capa) */
 @page :first {
     margin-top: 2cm;
     @top-left { content: normal; border-bottom: none; }
@@ -58,32 +55,34 @@
    CORPO PRINCIPAL
    ========================================================== */
 body {
-    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif; /* Fonte mais tradicional */
     font-size: 11pt;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #222222;
 }
 
 /* ==========================================================
-   CAPA - ALINHAMENTO ABSOLUTO (Sem quebras ou flexbox)
+   CAPA - CENTRALIZAÇÃO PERFEITA
    ========================================================== */
 .cover-page {
     page-break-after: always;
-    height: 100%;
-    text-align: center !important;
-    display: block;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     box-sizing: border-box;
+    padding: 0 1cm;
 }
 
 .cover-content {
     width: 100%;
-    text-align: center !important;
+    max-width: 100%;
 }
 
 .cover-institution {
-    margin-top: 1cm;
     margin-bottom: 4.5cm;
-    text-align: center !important;
 }
 
 .cover-title-main {
@@ -92,7 +91,6 @@ body {
     color: #0F4C81;
     letter-spacing: 1px;
     margin: 4px 0;
-    text-align: center !important;
 }
 
 .cover-title-secondary {
@@ -100,7 +98,6 @@ body {
     font-weight: normal;
     color: #333333;
     margin: 3px 0;
-    text-align: center !important;
 }
 
 .cover-title-tertiary {
@@ -108,7 +105,6 @@ body {
     font-weight: 600;
     color: #0F4C81;
     margin-top: 12px;
-    text-align: center !important;
 }
 
 .cover-divider {
@@ -123,7 +119,6 @@ body {
 
 .cover-project {
     margin-bottom: 5.5cm;
-    text-align: center !important;
 }
 
 .cover-project-title {
@@ -132,7 +127,6 @@ body {
     color: #0F4C81;
     margin: 4px 0;
     line-height: 1.2;
-    text-align: center !important;
 }
 
 .cover-project-subtitle {
@@ -141,30 +135,25 @@ body {
     color: #555555;
     margin-top: 15px;
     line-height: 1.4;
-    text-align: center !important;
 }
 
 .cover-footer {
     font-size: 11pt;
     color: #333333;
     font-weight: 500;
-    text-align: center !important;
-    width: 100%;
 }
 
 .cover-footer p {
     margin: 2px 0;
-    text-align: center !important;
 }
 
 /* ==========================================================
-   SUMÁRIO (Sem quebras forçadas antes/depois por padrão)
+   SUMÁRIO - QUEBRAS ANTES E DEPOIS
    ========================================================== */
 #toc {
+    page-break-before: always;
+    page-break-after: always;
     padding-top: 0.5cm;
-    margin-bottom: 1.5cm;
-    page-break-before: avoid !important;
-    page-break-after: avoid !important;
 }
 
 #toc h1 {
@@ -174,7 +163,7 @@ body {
     border-bottom: 2px solid #0F4C81;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    page-break-before: avoid !important;
+    page-break-before: avoid;
 }
 
 #toc ul {
@@ -197,15 +186,14 @@ body {
 }
 
 /* ==========================================================
-   TÍTULOS E ELEMENTOS GERAIS
+   TÍTULOS
    ========================================================== */
 h1, h2, h3, h4 {
     color: #0F4C81;
     font-weight: bold;
-    page-break-after: avoid; 
+    page-break-after: avoid;
 }
 
-/* Títulos h1 normais quebram página, exceto o primeiro pós-sumário */
 h1 {
     font-size: 17pt;
     border-bottom: 2px solid #0F4C81;
@@ -215,8 +203,9 @@ h1 {
     page-break-before: always;
 }
 
+/* O primeiro h1 após o sumário não deve quebrar */
 main > h1:first-of-type {
-    page-break-before: avoid !important;
+    page-break-before: avoid;
 }
 
 h2 {
@@ -227,6 +216,13 @@ h2 {
     margin-bottom: 12px;
 }
 
+h3 {
+    font-size: 12pt;
+    color: #1F5E99;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 p {
     text-align: justify;
     margin-top: 0;
@@ -234,30 +230,30 @@ p {
 }
 
 /* ==========================================================
-   FORÇAR REAFAFE DE PÁGINA NA SEÇÃO 5
-   Como o Pandoc cria IDs automáticos com base no nome do título,
-   mapeamos as duas possibilidades comuns (em português ou inglês):
+   QUEBRA DE PÁGINA ANTES DA SEÇÃO 5 (Arquitetura Geral)
    ========================================================== */
-#arquitetura-geral, 
-#arquitetura,
-#secao-5,
-#section-5 {
+h1#arquitetura-geral,
+h1#arquitetura,
+h1#secao-5,
+h1#section-5,
+h2#arquitetura-geral,
+h2#arquitetura {
     page-break-before: always !important;
 }
 
 /* ==========================================================
-   TABELAS ANCORADAS (Correção para a seção 7 / Margens Extensas)
+   TABELAS - CORREÇÃO PARA NÃO ULTRAPASSAREM MARGENS
    ========================================================== */
 table {
     width: 100% !important;
     max-width: 100% !important;
-    table-layout: fixed !important; /* Força respeitar estritamente a margem */
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
+    table-layout: fixed !important;
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 9pt; /* Leve redução para caber em cenários densos */
+    font-size: 8.5pt; /* Reduzida para caber */
     page-break-inside: avoid;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 thead {
@@ -268,10 +264,10 @@ thead {
 
 th, td {
     border: 1px solid #b0b0b0;
-    padding: 6px 8px;
+    padding: 5px 6px;
     text-align: left;
     vertical-align: middle;
-    word-break: break-word !important; /* Impede estouro de string longa */
+    word-break: break-word;
 }
 
 th {
@@ -282,8 +278,17 @@ tbody tr:nth-child(even) {
     background-color: #f8fafd;
 }
 
+/* Largura específica para colunas da tabela da Seção 7 (Cronograma) 
+   Ajuste conforme necessário, mas usamos porcentagens aproximadas */
+table:not(:first-of-type) th:nth-child(1) { width: 8%; }
+table:not(:first-of-type) th:nth-child(2) { width: 12%; }
+table:not(:first-of-type) th:nth-child(3) { width: 18%; }
+table:not(:first-of-type) th:nth-child(4) { width: 35%; }
+table:not(:first-of-type) th:nth-child(5) { width: 12%; }
+table:not(:first-of-type) th:nth-child(6) { width: 15%; }
+
 /* ==========================================================
-   CÓDIGO, LISTAS E AFINS
+   CÓDIGO, LISTAS, ETC
    ========================================================== */
 code {
     font-family: "Consolas", monospace;
