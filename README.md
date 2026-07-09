@@ -104,6 +104,8 @@ Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) of
 
 ### 7.1. Cronograma das Aulas
 
+![](assets/images/cronograma-aulas.png)
+
 | Data | Objetivo | Professor(es) | Marco | Notebook |
 |:----------:|------------------|---------------|------------------|-------------------|
 | **18/07** | Apresentar, formar grupos, dataset e ambiente. | Todos / **DL+BD** | Planejamento | **01_Exploracao** |
