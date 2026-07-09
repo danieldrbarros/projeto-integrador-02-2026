@@ -70,6 +70,8 @@ O objetivo é desenvolver um sistema capaz de:
 
 ---
 
+\newpage
+
 ## 5. Arquitetura Geral
 
 ```text
@@ -129,8 +131,6 @@ Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) of
 | **6** | **19/09/2026** | Integrar os modelos de texto e imagem em um único modelo multimodal. | **DL + PLN + VC** | Modelo multimodal integrado | **06_Modelo_Multimodal.ipynb** |
 | **7** | **03/10/2026** | Consolidar a solução, implementar o pipeline de inferência e discutir aspectos de escalabilidade e implantação. | **BD + DL** | Sistema integrado e operacional | **07_Pipeline_Final.ipynb** |
 | **8** | **17/10/2026** | Apresentação dos projetos finais, demonstração da solução e avaliação integrada. | **Todos** | Projeto concluído | **Projeto Final** |
-
----
 
 ### 7.2. Entregas Esperadas
 
