@@ -39,6 +39,8 @@ jobs:
             fonts-dejavu-extra \
             fonts-liberation \
             fonts-ubuntu \
+            fonts-roboto \
+            fonts-noto \
             libpango-1.0-0 \
             libcairo2 \
             libgdk-pixbuf-2.0-0

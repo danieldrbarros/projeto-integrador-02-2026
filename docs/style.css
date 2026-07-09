@@ -3,11 +3,13 @@
    Estilo para geração automática do README.pdf
    ========================================================== */
 
-/* ---------- PÁGINA ---------- */
+/* ==========================================================
+   CONFIGURAÇÕES DA PÁGINA
+   ========================================================== */
 
 @page {
     size: A4;
-    margin: 2cm 2cm 2.5cm 2cm;
+    margin: 2.5cm 2cm 2.5cm 2cm;
 
     @top-left {
         content: "Projeto Integrador II — PUC-SP";
@@ -16,7 +18,7 @@
         font-weight: bold;
         letter-spacing: 0.5px;
         padding-bottom: 3px;
-        border-bottom: 1px solid #0F4C81;
+        border-bottom: 1.5px solid #0F4C81;
     }
 
     @top-right {
@@ -26,23 +28,24 @@
         font-weight: bold;
         letter-spacing: 0.5px;
         padding-bottom: 3px;
-        border-bottom: 1px solid #0F4C81;
+        border-bottom: 1.5px solid #0F4C81;
     }
 
     @bottom-center {
         content: "Projeto Integrador II — PUC-SP";
-        font-size: 7.5pt;
-        color: #888888;
+        font-size: 7pt;
+        color: #999999;
+        letter-spacing: 0.3px;
     }
 
     @bottom-right {
         content: counter(page);
-        font-size: 8pt;
+        font-size: 8.5pt;
         color: #0F4C81;
         font-weight: bold;
     }
 
-    /* Remove cabeçalho da primeira página */
+    /* Remove cabeçalho da primeira página (capa) */
     :first-page {
         @top-left {
             content: none;
@@ -59,18 +62,30 @@
     }
 }
 
-/* ---------- CORPO ---------- */
+/* ==========================================================
+   CORPO PRINCIPAL
+   ========================================================== */
+
 body {
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 10.5pt;
     line-height: 1.5;
     color: #222222;
-    max-width: 900px;
-    margin: auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* ==========================================================
-   CAPA
+   QUEBRA DE PÁGINA
+   ========================================================== */
+
+.page-break {
+    page-break-after: always;
+    display: none;
+}
+
+/* ==========================================================
+   CAPA - PRIMEIRA PÁGINA
    ========================================================== */
 
 .cover-page {
@@ -80,18 +95,19 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0;
+    margin: -2.5cm -2cm 0 -2cm;
     padding: 0;
+    width: 100%;
 }
 
 .cover-content {
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 20px;
 }
 
 .cover-institution {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .cover-title-main {
@@ -99,7 +115,7 @@ body {
     font-weight: bold;
     color: #0F4C81;
     letter-spacing: 1px;
-    margin: 10px 0;
+    margin: 8px 0;
     line-height: 1.3;
 }
 
@@ -107,21 +123,21 @@ body {
     font-size: 15pt;
     font-weight: normal;
     color: #333333;
-    margin: 5px 0;
+    margin: 4px 0;
     line-height: 1.4;
 }
 
 .cover-title-tertiary {
     font-size: 14pt;
-    font-weight: 500;
+    font-weight: 600;
     color: #0F4C81;
     margin: 15px 0 5px 0;
     line-height: 1.4;
 }
 
 .cover-divider {
-    margin: 40px auto;
-    width: 60%;
+    margin: 35px auto;
+    width: 50%;
 }
 
 .cover-divider hr {
@@ -131,14 +147,14 @@ body {
 }
 
 .cover-project {
-    margin: 50px 0;
+    margin: 45px 0;
 }
 
 .cover-project-title {
     font-size: 22pt;
     font-weight: bold;
     color: #0F4C81;
-    margin: 8px 0;
+    margin: 6px 0;
     line-height: 1.3;
 }
 
@@ -151,13 +167,13 @@ body {
 }
 
 .cover-footer {
-    margin-top: 80px;
+    margin-top: 70px;
     font-size: 14pt;
     color: #333333;
 }
 
 .cover-footer p {
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
 /* ==========================================================
@@ -167,36 +183,63 @@ body {
 #toc {
     page-break-before: always;
     page-break-after: always;
-    padding-top: 20px;
+    padding: 30px 0;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 #toc h1 {
     text-align: center;
-    font-size: 20pt;
+    font-size: 22pt;
     color: #0F4C81;
     border-bottom: 2px solid #0F4C81;
     padding-bottom: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 #toc ul {
     list-style: none;
     padding-left: 0;
+    margin: 0;
 }
 
 #toc li {
-    padding: 8px 0;
-    border-bottom: 1px dotted #dddddd;
-    font-size: 11pt;
+    padding: 7px 0;
+    border-bottom: 1px dotted #e0e0e0;
+    font-size: 10.5pt;
+}
+
+#toc li:last-child {
+    border-bottom: none;
 }
 
 #toc a {
     color: #0F4C81;
     text-decoration: none;
+    font-weight: 500;
 }
 
 #toc a:hover {
     text-decoration: underline;
+}
+
+/* Níveis do sumário */
+#toc ul ul {
+    padding-left: 25px;
+}
+
+#toc ul ul li {
+    border-bottom: none;
+    padding: 4px 0;
+    font-size: 10pt;
+}
+
+#toc ul ul ul li {
+    padding-left: 20px;
+    font-size: 9.5pt;
+    color: #555555;
 }
 
 /* ==========================================================
@@ -207,44 +250,54 @@ h1 {
     color: #0F4C81;
     border-bottom: 3px solid #0F4C81;
     padding-bottom: 10px;
-    margin-top: 40px;
-    font-size: 20pt;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 18pt;
+    font-weight: bold;
     page-break-before: always;
 }
 
 h1:first-of-type {
     page-break-before: avoid;
     border-bottom: 2px solid #0F4C81;
+    margin-top: 0;
 }
 
 h2 {
     color: #0F4C81;
-    border-left: 6px solid #0F4C81;
+    border-left: 5px solid #0F4C81;
     padding-left: 12px;
-    margin-top: 35px;
-    font-size: 15pt;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14.5pt;
+    font-weight: 600;
 }
 
 h3 {
     color: #1F5E99;
-    margin-top: 25px;
-    font-size: 12.5pt;
+    margin-top: 22px;
+    margin-bottom: 12px;
+    font-size: 12pt;
+    font-weight: 600;
 }
 
 h4 {
     color: #2A6FA0;
-    margin-top: 20px;
-    font-size: 11pt;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 10.5pt;
+    font-weight: 600;
 }
 
 /* ==========================================================
-   TEXTO
+   PARÁGRAFOS E TEXTO
    ========================================================== */
 
 p {
     text-align: justify;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    line-height: 1.5;
 }
 
 /* ==========================================================
@@ -252,12 +305,14 @@ p {
    ========================================================== */
 
 ul, ol {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 25px;
 }
 
 li {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
+    line-height: 1.5;
 }
 
 /* ==========================================================
@@ -265,36 +320,42 @@ li {
    ========================================================== */
 
 code {
-    font-family: Consolas, monospace;
-    background: #f4f4f4;
-    padding: 2px 5px;
-    border-radius: 4px;
+    font-family: "Consolas", "Courier New", monospace;
+    background: #f4f6f8;
+    padding: 2px 6px;
+    border-radius: 3px;
     font-size: 9pt;
+    color: #0F4C81;
 }
 
 pre {
-    background: #f4f4f4;
+    background: #f4f6f8;
     border-left: 4px solid #0F4C81;
-    padding: 15px;
+    padding: 15px 18px;
     overflow: auto;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 9pt;
+    line-height: 1.4;
+    margin: 15px 0;
 }
 
 pre code {
     background: none;
+    color: #222222;
+    padding: 0;
 }
 
 /* ==========================================================
-   TABELAS
+   TABELAS - CORRIGIDAS
    ========================================================== */
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 18px 0;
     font-size: 9pt;
+    table-layout: auto;
+    word-wrap: break-word;
 }
 
 thead {
@@ -302,20 +363,50 @@ thead {
     color: white;
 }
 
-th, td {
-    padding: 8px 10px;
-    border: 1px solid #d0d0d0;
-    text-align: left;
-}
-
 thead th {
     background-color: #0F4C81;
-    color: white;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 12px;
+    border: 1px solid #0F4C81;
+    text-align: left;
+    font-size: 9.5pt;
 }
 
-tbody tr:nth-child(even) {
-    background: #f7f9fc;
+tbody td {
+    padding: 8px 12px;
+    border: 1px solid #d0d0d0;
+    text-align: left;
+    vertical-align: top;
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #f7f9fc;
+}
+
+tbody tr:hover td {
+    background-color: #eef3f8;
+}
+
+/* Larguras específicas para colunas */
+table colgroup col {
+    /* Definir larguras automáticas */
+}
+
+/* Para tabelas com muitas colunas */
+table {
+    font-size: 8.5pt;
+}
+
+table th, table td {
+    padding: 6px 8px;
+}
+
+/* Tabelas com células de código */
+table code {
+    font-size: 8pt;
+    background: #f0f2f5;
 }
 
 /* ==========================================================
@@ -337,8 +428,10 @@ a:hover {
 
 img {
     max-width: 80%;
+    height: auto;
     display: block;
     margin: 20px auto;
+    border-radius: 4px;
 }
 
 /* ==========================================================
@@ -346,11 +439,12 @@ img {
    ========================================================== */
 
 blockquote {
-    border-left: 5px solid #0F4C81;
+    border-left: 4px solid #0F4C81;
     background: #f8fbff;
-    padding: 12px 18px;
-    margin: 20px 0;
+    padding: 10px 18px;
+    margin: 15px 0;
     color: #444444;
+    font-style: italic;
 }
 
 /* ==========================================================
@@ -363,8 +457,8 @@ figure {
 }
 
 figcaption {
-    font-size: 9.5pt;
-    color: #555555;
+    font-size: 9pt;
+    color: #666666;
     font-style: italic;
     margin-top: 8px;
 }
@@ -374,53 +468,80 @@ figcaption {
    ========================================================== */
 
 footer {
-    font-size: 7.5pt;
+    font-size: 7pt;
     text-align: center;
-    color: #888888;
+    color: #999999;
     margin-top: 40px;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid #e0e0e0;
     padding-top: 15px;
 }
 
-/* ==========================================================
-   QUEBRA DE PÁGINA
-   ========================================================== */
-
-table, pre, blockquote, img, figure {
-    page-break-inside: avoid;
-}
-
-h2, h3, h4 {
-    page-break-after: avoid;
+footer hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 0 0 10px 0;
 }
 
 /* ==========================================================
-   DESTAQUES
+   ELEMENTOS DE DESTAQUE
    ========================================================== */
 
 strong {
     color: #0F4C81;
+    font-weight: 600;
 }
 
 em {
-    color: #444444;
+    color: #555555;
+    font-style: italic;
 }
 
 /* ==========================================================
-   IMPRESSÃO
+   QUEBRAS DE PÁGINA AUTOMÁTICAS
+   ========================================================== */
+
+table, pre, blockquote, img, figure, ul, ol {
+    page-break-inside: avoid;
+}
+
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+}
+
+/* ==========================================================
+   MODO DE IMPRESSÃO
    ========================================================== */
 
 @media print {
     body {
         font-size: 10pt;
+        line-height: 1.4;
     }
 
     a {
-        color: black;
+        color: #0F4C81;
         text-decoration: none;
     }
 
     .cover-page {
         height: 100vh;
+        margin: -2.5cm -2cm 0 -2cm;
+    }
+
+    /* Garantir que tabelas não quebrem */
+    table {
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tbody {
+        display: table-row-group;
+    }
+
+    tr {
+        page-break-inside: avoid;
     }
 }

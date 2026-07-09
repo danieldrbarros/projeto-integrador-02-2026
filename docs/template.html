@@ -13,21 +13,37 @@
 
 <body>
 
-    <!-- Capa -->
-    <header class="cover">
-        <h1>Projeto Integrador I</h1>
-        <h2>Modelo de Machine Learning</h2>
-        <p class="subtitle">$title$</p>
-        <hr>
-        <div class="info">
-            <p><strong>Instituição:</strong> PUC-SP</p>
-            <p><strong>Curso:</strong> Especialização em Inteligência Artificial</p>
-            <p><strong>Módulo I — 1° Semestre de 2026</strong></p>
-            <p><strong>Última atualização:</strong> $if(date)$$date$$else$Gerado automaticamente pelo GitHub Actions.$endif$</p>
+    <!-- CAPA - Primeira página -->
+    <div class="cover-page">
+        <div class="cover-content">
+            <div class="cover-institution">
+                <p class="cover-title-main">PONTIFÍCIA UNIVERSIDADE CATÓLICA DE SÃO PAULO</p>
+                <p class="cover-title-secondary">Faculdade de Estudos Interdisciplinares</p>
+                <p class="cover-title-secondary">Pró-Reitoria de Educação Continuada</p>
+                <p class="cover-title-tertiary">Curso de Especialização em Inteligência Artificial</p>
+            </div>
+            
+            <div class="cover-divider">
+                <hr>
+            </div>
+            
+            <div class="cover-project">
+                <p class="cover-project-title">Projeto Integrador II:</p>
+                <p class="cover-project-title">Aplicação de Deep Learning</p>
+                <p class="cover-project-subtitle">Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências</p>
+            </div>
+            
+            <div class="cover-footer">
+                <p>São Paulo</p>
+                <p>2026</p>
+            </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Sumário -->
+    <!-- QUEBRA DE PÁGINA ANTES DO SUMÁRIO -->
+    <div class="page-break"></div>
+
+    <!-- SUMÁRIO - Página específica -->
     $if(toc)$
     <nav id="toc">
         <h1>Sumário</h1>
@@ -35,15 +51,18 @@
     </nav>
     $endif$
 
-    <!-- Conteúdo Principal -->
+    <!-- QUEBRA DE PÁGINA APÓS O SUMÁRIO -->
+    <div class="page-break"></div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
         $body$
     </main>
 
-    <!-- Rodapé -->
+    <!-- RODAPÉ -->
     <footer>
         <hr>
-        <p>Projeto Integrador I — PUC-SP</p>
+        <p>Projeto Integrador II — PUC-SP</p>
         <p>Especialização em IA</p>
     </footer>
 

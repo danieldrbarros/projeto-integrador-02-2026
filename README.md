@@ -39,7 +39,7 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 ## 3. Disciplinas Envolvidas
 
 | Sigla | Disciplina | Professor |
-|--------|------------|------------|
+|-------|------------|-----------|
 | **BD** | Big Data e Engenharia de Dados | Daniel Carvalho |
 | **PLN** | Processamento de Linguagem Natural | Gabriel Santos |
 | **VC** | Visão Computacional | Silvio Stanzani |
@@ -164,7 +164,7 @@ Cada grupo deverá entregar:
 ## 9. Critérios de Avaliação
 
 | Critério | Disciplina Relacionada | Peso |
-|-----------|-----------|:---:|
+|----------|------------------------|:----:|
 | Pipeline de Big Data e Engenharia de Dados | BD | 15% |
 | Modelo de Deep Learning | DL | 20% |
 | Modelo de Processamento de Linguagem Natural | PLN | 15% |
@@ -255,37 +255,25 @@ O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
 Sim.
 
----
-
 ### Podemos utilizar PyTorch?
 
 Sim.
-
----
 
 ### Podemos utilizar outros modelos além dos apresentados em aula?
 
 Sim, desde que devidamente documentados.
 
----
-
 ### Podemos utilizar bibliotecas adicionais?
 
 Sim.
-
----
 
 ### Podemos utilizar Inteligência Artificial Generativa?
 
 Sim, desde que o uso seja informado e documentado no relatório técnico.
 
----
-
 ### Podemos utilizar outro dataset?
 
-Não.
-
-Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores.
+Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores.
 
 ---
 
