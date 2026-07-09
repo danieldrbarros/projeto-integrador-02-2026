@@ -38,12 +38,7 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 
 ## 3. Disciplinas Envolvidas
 
-| Sigla | Disciplina | Professor |
-|-------|------------|-----------|
-| **BD** | Big Data e Engenharia de Dados | Daniel Carvalho |
-| **PLN** | Processamento de Linguagem Natural | Gabriel Santos |
-| **VC** | Visão Computacional | Silvio Stanzani |
-| **DL** | Fundamentos de Deep Learning | Daniel Barros |
+![](assets/images/disciplinas.png)
 
 ---
 
@@ -75,31 +70,6 @@ O objetivo é desenvolver um sistema capaz de:
 ## 5. Arquitetura Geral
 
 ![](assets/images/arquitetura.png)
-
-```text
-                         Chamados
-                           │
-                ┌──────────┴──────────┐
-                │                     │
-             Texto                Imagem
-                │                     │
-                └──────────┬──────────┘
-                           │
-           Big Data e Engenharia de Dados
-                           │
-            ┌──────────────┴──────────────┐
-            │                             │
-            ▼                             ▼
- Processamento de                 Visão
- Linguagem Natural            Computacional
-            │                             │
-            └──────────────┬──────────────┘
-                           │
-                 Deep Learning
-                           │
-                           ▼
-            Sistema Inteligente Final
-```
 
 ---
 
