@@ -4,14 +4,19 @@
    ========================================================== */
 
 /* ---------- Página ---------- */
-
 @page {
     size: A4;
-    margin: 2cm;
+    margin: 2cm 2cm 2.5cm 2cm; /* Margem inferior maior para o rodapé */
+
+    @bottom-left {
+        content: "Projeto Integrador I — PUC-SP";
+        font-size: 8pt;
+        color: #666666;
+    }
 
     @bottom-center {
-        content: "Projeto Integrador 02/2026";
-        font-size: 9pt;
+        content: "Especialização em IA";
+        font-size: 8pt;
         color: #666666;
     }
 
@@ -20,296 +25,291 @@
         font-size: 9pt;
         color: #666666;
     }
+
+    /* Estilo para o cabeçalho das páginas */
+    @top-center {
+        content: string(heading);
+        font-size: 9pt;
+        color: #0F4C81;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+    }
 }
 
 /* ---------- Corpo ---------- */
-
 body {
-
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-
     font-size: 11pt;
-
     line-height: 1.6;
-
     color: #222222;
-
     max-width: 900px;
-
     margin: auto;
 }
 
 /* ---------- Títulos ---------- */
-
 h1 {
-
     color: #0F4C81;
-
     border-bottom: 3px solid #0F4C81;
-
     padding-bottom: 10px;
-
     margin-top: 40px;
-
     page-break-before: always;
 }
 
-h1:first-of-type{
-
+h1:first-of-type {
     page-break-before: avoid;
-
-    text-align:center;
-
-    font-size:30pt;
-
-    border:none;
-
-    margin-top:40px;
-
-    margin-bottom:40px;
+    text-align: center;
+    font-size: 28pt;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-h2{
-
-    color:#0F4C81;
-
-    border-left:6px solid #0F4C81;
-
-    padding-left:12px;
-
-    margin-top:35px;
+/* Primeiro título da capa */
+h1 + h2 {
+    text-align: center;
+    border: none;
+    color: #444444;
+    margin-top: -20px;
+    margin-bottom: 60px;
+    font-size: 18pt;
+    font-weight: normal;
 }
 
-h3{
+h2 {
+    color: #0F4C81;
+    border-left: 6px solid #0F4C81;
+    padding-left: 12px;
+    margin-top: 35px;
+    font-size: 16pt;
+    string-set: heading content(); /* Para o cabeçalho */
+}
 
-    color:#1F5E99;
+h3 {
+    color: #1F5E99;
+    margin-top: 25px;
+    font-size: 13pt;
+}
 
-    margin-top:25px;
+h4 {
+    color: #2A6FA0;
+    margin-top: 20px;
+    font-size: 11.5pt;
+}
+
+/* ---------- TOC (Sumário) ---------- */
+#toc {
+    page-break-before: always;
+    page-break-after: always;
+}
+
+#toc h1 {
+    border-bottom: 2px solid #0F4C81;
+    text-align: center;
+    font-size: 20pt;
+    margin-bottom: 30px;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#toc li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ddd;
+}
+
+#toc a {
+    color: #0F4C81;
+    text-decoration: none;
 }
 
 /* ---------- Texto ---------- */
-
-p{
-
-    text-align:justify;
-
-    margin-top:10px;
-
-    margin-bottom:10px;
+p {
+    text-align: justify;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 /* ---------- Listas ---------- */
-
-ul{
-
-    margin-top:8px;
-
-    margin-bottom:8px;
+ul, ol {
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
-li{
-
-    margin-bottom:6px;
+li {
+    margin-bottom: 4px;
 }
 
 /* ---------- Código ---------- */
-
-code{
-
+code {
     font-family: Consolas, monospace;
-
-    background:#f4f4f4;
-
-    padding:2px 5px;
-
-    border-radius:4px;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 9.5pt;
 }
 
-pre{
-
-    background:#f4f4f4;
-
-    border-left:4px solid #0F4C81;
-
-    padding:15px;
-
-    overflow:auto;
-
-    border-radius:6px;
-
-    font-size:10pt;
+pre {
+    background: #f4f4f4;
+    border-left: 4px solid #0F4C81;
+    padding: 15px;
+    overflow: auto;
+    border-radius: 6px;
+    font-size: 9.5pt;
 }
 
-pre code{
-
-    background:none;
+pre code {
+    background: none;
 }
 
 /* ---------- Tabelas ---------- */
-
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin-top:20px;
-
-    margin-bottom:20px;
-
-    font-size:10pt;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 9.5pt;
 }
 
-thead{
-
-    background:#0F4C81;
-
-    color:white;
+thead {
+    background: #0F4C81;
+    color: white;
 }
 
-th{
-
-    padding:10px;
-
-    border:1px solid #d0d0d0;
-
-    text-align:left;
+th, td {
+    padding: 8px 10px;
+    border: 1px solid #d0d0d0;
+    text-align: left;
 }
 
-td{
-
-    padding:10px;
-
-    border:1px solid #d0d0d0;
+thead th {
+    background-color: #0F4C81;
+    color: white;
 }
 
-tbody tr:nth-child(even){
-
-    background:#f7f9fc;
+tbody tr:nth-child(even) {
+    background: #f7f9fc;
 }
 
 /* ---------- Links ---------- */
-
-a{
-
-    color:#0F4C81;
-
-    text-decoration:none;
+a {
+    color: #0F4C81;
+    text-decoration: none;
 }
 
-a:hover{
-
-    text-decoration:underline;
+a:hover {
+    text-decoration: underline;
 }
 
 /* ---------- Imagens ---------- */
-
-img{
-
-    max-width:100%;
-
-    display:block;
-
-    margin:auto;
-
-    margin-top:20px;
-
-    margin-bottom:20px;
+img {
+    max-width: 80%;
+    display: block;
+    margin: 20px auto;
 }
 
 /* ---------- Blockquotes ---------- */
-
-blockquote{
-
-    border-left:5px solid #0F4C81;
-
-    background:#f8fbff;
-
-    padding:12px 18px;
-
-    margin:20px 0;
-
-    color:#444444;
+blockquote {
+    border-left: 5px solid #0F4C81;
+    background: #f8fbff;
+    padding: 12px 18px;
+    margin: 20px 0;
+    color: #444444;
 }
 
-/* ---------- Separadores ---------- */
-
-hr{
-
-    border:none;
-
-    border-top:2px solid #dddddd;
-
-    margin:35px 0;
+/* ---------- Figuras e Legendas ---------- */
+figure {
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* ---------- Quebra de página ---------- */
-
-table,
-pre,
-blockquote,
-img{
-
-    page-break-inside: avoid;
-}
-
-h2,
-h3{
-
-    page-break-after: avoid;
+figcaption {
+    font-size: 10pt;
+    color: #555;
+    font-style: italic;
+    margin-top: 8px;
 }
 
 /* ---------- Capa ---------- */
+.cover {
+    text-align: center;
+    margin-bottom: 60px;
+}
 
-h1 + h2{
+.cover h1 {
+    font-size: 32pt;
+    color: #0F4C81;
+    border: none;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
 
-    text-align:center;
+.cover h2 {
+    font-size: 24pt;
+    color: #333;
+    border: none;
+    margin-bottom: 30px;
+}
 
-    border:none;
+.cover .subtitle {
+    font-size: 16pt;
+    color: #555;
+    margin: 20px 0 40px 0;
+}
 
-    color:#444444;
+.cover hr {
+    width: 50%;
+    margin: 30px auto;
+}
 
-    margin-top:-20px;
-
-    margin-bottom:60px;
+.cover .info {
+    font-size: 11pt;
+    color: #444;
+    line-height: 2;
 }
 
 /* ---------- Rodapé ---------- */
+footer {
+    font-size: 8pt;
+    text-align: center;
+    color: #777777;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
 
-footer{
+/* ---------- Quebra de página ---------- */
+table, pre, blockquote, img, figure {
+    page-break-inside: avoid;
+}
 
-    font-size:9pt;
-
-    text-align:center;
-
-    color:#777777;
+h2, h3, h4 {
+    page-break-after: avoid;
 }
 
 /* ---------- Destaques ---------- */
-
-strong{
-
-    color:#0F4C81;
+strong {
+    color: #0F4C81;
 }
 
-em{
-
-    color:#444444;
+em {
+    color: #444444;
 }
 
 /* ---------- Impressão ---------- */
-
-@media print{
-
-    body{
-
-        font-size:11pt;
+@media print {
+    body {
+        font-size: 10.5pt;
     }
 
-    a{
+    a {
+        color: black;
+        text-decoration: none;
+    }
 
-        color:black;
-
-        text-decoration:none;
+    .cover h1 {
+        margin-top: 60px;
     }
 }

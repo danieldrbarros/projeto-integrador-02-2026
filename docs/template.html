@@ -2,100 +2,50 @@
 <html lang="pt-BR">
 
 <head>
-
-<meta charset="utf-8">
-
-<title>$title$</title>
-
-$if(author)$
-<meta name="author" content="$author$">
-$endif$
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="utf-8">
+    <title>$title$</title>
+    $if(author)$
+    <meta name="author" content="$author$">
+    $endif$
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+    <!-- Capa -->
+    <header class="cover">
+        <h1>Projeto Integrador I</h1>
+        <h2>Modelo de Machine Learning</h2>
+        <p class="subtitle">$title$</p>
+        <hr>
+        <div class="info">
+            <p><strong>Instituição:</strong> PUC-SP</p>
+            <p><strong>Curso:</strong> Especialização em Inteligência Artificial</p>
+            <p><strong>Módulo I — 1° Semestre de 2026</strong></p>
+            <p><strong>Última atualização:</strong> $if(date)$$date$$else$Gerado automaticamente pelo GitHub Actions.$endif$</p>
+        </div>
+    </header>
 
-<div class="cover">
+    <!-- Sumário -->
+    $if(toc)$
+    <nav id="toc">
+        <h1>Sumário</h1>
+        $toc$
+    </nav>
+    $endif$
 
-<h1>Projeto Integrador 02/2026</h1>
+    <!-- Conteúdo Principal -->
+    <main>
+        $body$
+    </main>
 
-<h2>Pós-Graduação em Inteligência Artificial</h2>
-
-<p class="subtitle">
-
-Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências
-
-</p>
-
-<hr>
-
-<p>
-
-<strong>Instituição:</strong> _______________________________
-
-</p>
-
-<p>
-
-<strong>Curso:</strong> Pós-Graduação em Inteligência Artificial
-
-</p>
-
-<p>
-
-<strong>Semestre:</strong> 2026/2
-
-</p>
-
-<p>
-
-<strong>Última atualização:</strong>
-
-$if(date)$
-
-$date$
-
-$else$
-
-Gerado automaticamente pelo GitHub Actions.
-
-$endif$
-
-</p>
-
-</div>
-
-</header>
-
-<main>
-
-$body$
-
-</main>
-
-<footer>
-
-<hr>
-
-<p>
-
-Projeto Integrador 02/2026
-
-</p>
-
-<p>
-
-Documento gerado automaticamente a partir do README.md
-
-</p>
-
-</footer>
+    <!-- Rodapé -->
+    <footer>
+        <hr>
+        <p>Projeto Integrador I — PUC-SP</p>
+        <p>Especialização em IA</p>
+    </footer>
 
 </body>
 

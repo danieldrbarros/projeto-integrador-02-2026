@@ -8,7 +8,7 @@
 
 ---
 
-# Sobre o Projeto
+## 1. Sobre o Projeto
 
 O Projeto Integrador tem como objetivo agregar os conhecimentos desenvolvidos nas disciplinas da Pós-Graduação em Inteligência Artificial por meio da construção de uma solução baseada em Inteligência Artificial aplicada a um problema real.
 
@@ -18,22 +18,35 @@ Todo o desenvolvimento deverá ser realizado em equipes utilizando GitHub como f
 
 ---
 
-# Objetivos de Aprendizagem
+## 2. Objetivos
+
+### 2.1. Objetivos de Aprendizagem
 
 Ao final do Projeto Integrador espera-se que os estudantes sejam capazes de:
 
-- trabalhar em equipes utilizando GitHub;
-- desenvolver pipelines de Big Data e Engenharia de Dados;
-- aplicar técnicas modernas de Processamento de Linguagem Natural;
-- desenvolver modelos de Visão Computacional;
-- construir modelos de Deep Learning;
-- integrar diferentes modalidades de dados em um único sistema inteligente;
-- documentar adequadamente um projeto de IA;
-- apresentar tecnicamente uma solução completa.
+1. Trabalhar em equipes utilizando GitHub;
+2. Desenvolver pipelines de Big Data e Engenharia de Dados;
+3. Aplicar técnicas modernas de Processamento de Linguagem Natural;
+4. Desenvolver modelos de Visão Computacional;
+5. Construir modelos de Deep Learning;
+6. Integrar diferentes modalidades de dados em um único sistema inteligente;
+7. Documentar adequadamente um projeto de IA;
+8. Apresentar tecnicamente uma solução completa.
+
+### 2.2. Objetivos Pedagógicos
+
+Ao final do projeto espera-se que os estudantes sejam capazes de:
+
+- Desenvolver soluções reais utilizando IA;
+- Integrar diferentes áreas da Inteligência Artificial;
+- Trabalhar colaborativamente em equipes;
+- Organizar projetos utilizando Git e GitHub;
+- Documentar adequadamente seus experimentos;
+- Apresentar resultados técnicos de forma clara e objetiva.
 
 ---
 
-# Disciplinas Envolvidas
+## 3. Disciplinas Envolvidas
 
 | Sigla | Disciplina | Professor |
 |--------|------------|------------|
@@ -44,11 +57,9 @@ Ao final do Projeto Integrador espera-se que os estudantes sejam capazes de:
 
 ---
 
-# Projeto Integrador
+## 4. Tema do Projeto
 
-## Tema
-
-**Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências**
+### Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências
 
 Imagine uma empresa que recebe milhares de chamados contendo:
 
@@ -69,11 +80,11 @@ O objetivo é desenvolver um sistema capaz de:
 
 ---
 
-# Arquitetura Geral
+## 5. Arquitetura Geral
 
 ```text
                          Chamados
-
+                           │
                 ┌──────────┴──────────┐
                 │                     │
              Texto                Imagem
@@ -85,10 +96,9 @@ O objetivo é desenvolver um sistema capaz de:
             ┌──────────────┴──────────────┐
             │                             │
             ▼                             ▼
-
  Processamento de                 Visão
  Linguagem Natural            Computacional
-
+            │                             │
             └──────────────┬──────────────┘
                            │
                  Deep Learning
@@ -99,20 +109,7 @@ O objetivo é desenvolver um sistema capaz de:
 
 ---
 
-# Objetivos Pedagógicos
-
-Ao final do projeto espera-se que os estudantes sejam capazes de:
-
-- desenvolver soluções reais utilizando IA;
-- integrar diferentes áreas da Inteligência Artificial;
-- trabalhar colaborativamente em equipes;
-- organizar projetos utilizando Git e GitHub;
-- documentar adequadamente seus experimentos;
-- apresentar resultados técnicos de forma clara e objetiva.
-
----
-
-# Organização entre os Professores
+## 6. Organização entre os Professores
 
 Cada professor permanece responsável pelos conteúdos da sua disciplina.
 
@@ -124,13 +121,13 @@ Recomenda-se que os professores mantenham reuniões rápidas de alinhamento semp
 
 ---
 
-# Cronograma
+## 7. Cronograma
 
 O Projeto Integrador será desenvolvido ao longo de **8 encontros remotos síncronos**, acompanhando a evolução das disciplinas participantes. A cada aula, os estudantes desenvolverão uma nova etapa da solução, construindo incrementalmente um **Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências**.
 
 Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) oficial**, definido pelos professores no início do semestre.
 
-## Cronograma das Aulas
+### 7.1. Cronograma das Aulas
 
 | Aula | Data | Objetivo da Aula | Professor(es) | Marco do Projeto | Notebook da Etapa |
 |:----:|:----------:|------------------|---------------|------------------|-------------------|
@@ -145,7 +142,7 @@ Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) of
 
 ---
 
-## Entregas Esperadas
+### 7.2. Entregas Esperadas
 
 Cada notebook representa uma etapa incremental da construção da solução. Ao final do semestre, todos os notebooks deverão compor um único repositório GitHub organizado, documentado e reproduzível.
 
@@ -162,7 +159,7 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 
 ---
 
-# Produto Final
+## 8. Produto Final
 
 Cada grupo deverá entregar:
 
@@ -174,22 +171,27 @@ Cada grupo deverá entregar:
 
 ---
 
-# Critérios de Avaliação
+## 9. Critérios de Avaliação
 
 | Critério | Disciplina Relacionada | Peso |
 |-----------|-----------|:---:|
-| | BD | 15% |
-| | DL | 20% |
-| | PLN | 15% |
-| | VC | 15% |
-| | Modelo Multimodal | 20% |
-| | Organização do GitHub | 5% |
-| | Relatório Técnico | 5% |
+| Pipeline de Big Data e Engenharia de Dados | BD | 15% |
+| Modelo de Deep Learning | DL | 20% |
+| Modelo de Processamento de Linguagem Natural | PLN | 15% |
+| Modelo de Visão Computacional | VC | 15% |
+| Modelo Multimodal Integrado | Transversal | 20% |
+| Organização do GitHub e Documentação | Transversal | 5% |
+| Relatório Técnico | Transversal | 5% |
 | Apresentação oral e defesa do Projeto | Transversal | 5% |
+| **Total** | | **100%** |
+
+### Nota mínima para aprovação
+
+De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 (sete) no Projeto Integrador para aprovação no Módulo I. Frequência mínima exigida: 75%.
 
 ---
 
-# Tecnologias Sugeridas
+## 10. Tecnologias Sugeridas
 
 - Git
 - GitHub
@@ -205,36 +207,59 @@ Cada grupo deverá entregar:
 
 ---
 
-# Estrutura Esperada dos Repositórios dos Grupos
+## 11. Estrutura Esperada dos Repositórios dos Grupos
 
 ```
 grupo-XX/
 ├── README.md
 ├── notebooks/
+│   ├── 01_Exploracao.ipynb
+│   ├── 02_Engenharia_Dados.ipynb
+│   ├── 03_Deep_Learning.ipynb
+│   ├── 04_PLN.ipynb
+│   ├── 05_Visao_Computacional.ipynb
+│   ├── 06_Modelo_Multimodal.ipynb
+│   └── 07_Pipeline_Final.ipynb
 ├── models/
 ├── reports/
 ├── presentation/
 ├── src/
+│   ├── data_loader.py
+│   ├── preprocessing.py
+│   ├── models.py
+│   └── utils.py
 ├── requirements.txt
+└── .gitignore
 ```
 
 ---
 
-# Organização do Projeto
+## 12. Organização do Projeto
 
 Cada grupo deverá utilizar GitHub durante todo o desenvolvimento.
 
 Recomenda-se:
 
-- utilização de Issues;
-- utilização de Pull Requests;
-- commits frequentes;
-- documentação contínua;
-- versionamento dos notebooks.
+- Utilização de Issues para gerenciamento de tarefas;
+- Utilização de Pull Requests para revisão de código;
+- Commits frequentes com mensagens descritivas;
+- Documentação contínua do progresso;
+- Versionamento adequado dos notebooks.
 
 ---
 
-# FAQ
+## 13. Considerações Finais e Ética
+
+O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
+
+- **Privacidade**: Serão utilizados exclusivamente dados sintéticos ou anonimizados. Nenhum dado pessoal ou sensível será processado.
+- **Viés algorítmico**: Os modelos serão avaliados quanto a possíveis vieses que possam impactar negativamente grupos específicos.
+- **Transparência**: Todo o código, dados e metodologia estarão disponíveis publicamente no GitHub, garantindo reprodutibilidade.
+- **Finalidade**: O projeto tem fins exclusivamente acadêmicos e visa contribuir para o aprendizado e desenvolvimento de habilidades em IA.
+
+---
+
+## 14. FAQ
 
 ### Podemos utilizar TensorFlow?
 
@@ -273,3 +298,40 @@ Não.
 Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores.
 
 ---
+
+## 15. Referências Bibliográficas
+
+[1] GÉRON, Aurélien. *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow*. 2. ed. Sebastopol: O'Reilly Media, 2019.
+
+[2] MÜELLER, Andreas C.; GUIDO, Sarah. *Introduction to Machine Learning with Python: A Guide for Data Scientists*. Sebastopol: O'Reilly Media, 2016.
+
+[3] MCKINNEY, Wes. *Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython*. 2. ed. Sebastopol: O'Reilly Media, 2017.
+
+[4] CHOLLET, François. *Deep Learning with Python*. 2. ed. Nova York: Manning Publications, 2021.
+
+[5] BURKOV, Andriy. *The Hundred-Page Machine Learning Book*. Trois-Rivières: Burkov, 2019.
+
+[6] HASTIE, Trevor; TIBSHIRANI, Robert; FRIEDMAN, Jerome. *The Elements of Statistical Learning*. 2. ed. Nova York: Springer, 2009.
+
+[7] VASWANI, Ashish et al. "Attention Is All You Need". In: *Advances in Neural Information Processing Systems*, 2017.
+
+[8] LAKSHMANAN, V.; ROBINSON, S.; MUNN, M. *Machine Learning Design Patterns*. Sebastopol: O'Reilly Media, 2020.
+
+[9] PEDREGOSA, F. et al. Scikit-learn: Machine Learning in Python. *Journal of Machine Learning Research*, v. 12, p. 2825–2830, 2011.
+
+[10] ABADI, Martín et al. TensorFlow: A System for Large-Scale Machine Learning. In: *12th USENIX Symposium on Operating Systems Design and Implementation*, 2016.
+
+---
+
+## Informações do Projeto
+
+| Informação | Detalhe |
+|------------|---------|
+| **Disciplina** | Projeto Integrador II: Aplicação de Deep Learning |
+| **Curso** | Pós-Graduação em Inteligência Artificial |
+| **Instituição** | PUC-SP |
+| **Carga horária** | 40 horas |
+| **Equipe** | 1 a 4 alunos |
+| **Repositório** | Código versionado no GitHub |
+| **Ferramentas** | Python, Jupyter, TensorFlow, Scikit-learn |
+| **Entrega final** | Apresentação do projeto + código documentado |
