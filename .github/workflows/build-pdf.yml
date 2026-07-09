@@ -62,7 +62,7 @@ jobs:
 
       - name: Convert HTML to PDF
         run: |
-          weasyprint README.html README.pdf
+          weasyprint README.html README.pdf --presentational-hints
 
       - name: Commit README.pdf
         uses: stefanzweifel/git-auto-commit-action@v5

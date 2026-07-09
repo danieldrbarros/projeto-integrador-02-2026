@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8">
     <title>$title$</title>
@@ -10,10 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- CAPA - Primeira página -->
     <div class="cover-page">
         <div class="cover-content">
             <div class="cover-institution">
@@ -40,7 +37,6 @@
         </div>
     </div>
 
-    <!-- SUMÁRIO - Página específica -->
     $if(toc)$
     <nav id="toc">
         <h1>Sumário</h1>
@@ -48,18 +44,9 @@
     </nav>
     $endif$
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <main>
         $body$
     </main>
 
-    <!-- RODAPÉ -->
-    <footer>
-        <hr>
-        <p>Projeto Integrador II — PUC-SP</p>
-        <p>Especialização em IA</p>
-    </footer>
-
 </body>
-
 </html>
