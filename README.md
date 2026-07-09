@@ -6,6 +6,19 @@ Durante o semestre, os estudantes desenvolverão incrementalmente um **Sistema I
 
 Todo o desenvolvimento deverá ser realizado em equipes utilizando GitHub como ferramenta de gerenciamento do projeto.
 
+### 
+
+|  |  |
+|------------|---------|
+| **Disciplina** | Projeto Integrador II: Aplicação de Deep Learning |
+| **Curso** | Pós-Graduação em Inteligência Artificial |
+| **Instituição** | PUC-SP |
+| **Carga horária** | 40 horas |
+| **Equipe** | 1 a 4 alunos |
+| **Repositório** | Código versionado no GitHub |
+| **Ferramentas** | Python, Jupyter, TensorFlow, Scikit-learn |
+| **Entrega final** | Apresentação do projeto + código documentado |
+
 ---
 
 ## 2. Objetivos
@@ -93,7 +106,7 @@ Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) of
 
 ### 7.1. Cronograma das Aulas
 
-| Aula | Data | Objetivo da Aula | Professor(es) | Marco do Projeto | Notebook da Etapa |
+| Aula | Data | Objetivo | Professor(es) | Marco | Notebook |
 |:----:|:----------:|------------------|---------------|------------------|-------------------|
 | **1** | **18/07/2026** | Apresentar o Projeto Integrador, formar os grupos, apresentar o dataset oficial e organizar o ambiente de desenvolvimento. | Todos (preferencialmente) ou **DL + BD** | Planejamento do projeto | **01_Exploracao.ipynb** |
 | **2** | **25/07/2026** | Construir o pipeline de preparação dos dados (ETL, limpeza, transformação e particionamento). | **BD + DL** | Dados preparados | **02_Engenharia_Dados.ipynb** |
@@ -108,7 +121,7 @@ Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) of
 
 Cada notebook representa uma etapa incremental da construção da solução. Ao final do semestre, todos os notebooks deverão compor um único repositório GitHub organizado, documentado e reproduzível.
 
-| Notebook da Etapa | Aula | Objetivo | Competências Desenvolvidas | Conteúdo Esperado |
+| Notebook da Etapa | Aula | Objetivo | Competências | Conteúdo |
 |-------------------|:----:|----------|----------------------------|-------------------|
 | **01_Exploracao.ipynb** | 1 | Planejar o projeto e compreender o problema. | Planejamento de projetos, organização do trabalho em equipe, exploração de dados e definição da arquitetura da solução. | Descrição do problema, utlização do [dataset](/materiais/dataset/README.md), análise exploratória dos dados (EDA), arquitetura inicial da solução e planejamento das atividades do grupo. |
 | **02_Engenharia_Dados.ipynb** | 2 | Preparar os dados para utilização pelos modelos de IA. | Engenharia de Dados, ETL, tratamento e preparação dos dados. | Pipeline de ingestão dos dados, limpeza, transformação, tratamento de valores ausentes, particionamento dos conjuntos de treino/validação/teste e documentação do processo. |
@@ -272,16 +285,3 @@ Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos 
 [10] ABADI, Martín et al. TensorFlow: A System for Large-Scale Machine Learning. In: *12th USENIX Symposium on Operating Systems Design and Implementation*, 2016.
 
 ---
-
-## Informações do Projeto
-
-| Informação | Detalhe |
-|------------|---------|
-| **Disciplina** | Projeto Integrador II: Aplicação de Deep Learning |
-| **Curso** | Pós-Graduação em Inteligência Artificial |
-| **Instituição** | PUC-SP |
-| **Carga horária** | 40 horas |
-| **Equipe** | 1 a 4 alunos |
-| **Repositório** | Código versionado no GitHub |
-| **Ferramentas** | Python, Jupyter, TensorFlow, Scikit-learn |
-| **Entrega final** | Apresentação do projeto + código documentado |
