@@ -104,7 +104,7 @@ Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) of
 
 ### 7.1. Cronograma das Aulas
 
-<img src="assets/images/cronograma-aulas.png" width="115%">
+<img src="assets/images/cronograma-aulas.png" width="110%">
 
 | Data | Objetivo | Professor(es) | Marco | Notebook |
 |:----------:|------------------|---------------|------------------|-------------------|
