@@ -51,11 +51,46 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 
 ## 3. Disciplinas Envolvidas
 
-![](assets/images/disciplinas.png)
+<!-- ![](assets/images/disciplinas.png) -->
+
+| Sigla | Disciplina | Professor |
+|-------|------------|-----------|
+| **BD** | Big Data e Engenharia de Dados | Daniel Carvalho |
+| **PLN** | Processamento de Linguagem Natural | Gabriel Santos |
+| **VC** | Visão Computacional | Silvio Stanzani |
+| **DL** | Fundamentos de Deep Learning | Daniel Barros |
 
 ---
 
 ## 4. Tema do Projeto
+
+### 4.1 Contexto do Problema
+
+Uma empresa nacional de suporte de TI atende centenas de clientes corporativos e recebe milhares de chamados técnicos todos os meses.
+
+Cada chamado pode conter diferentes modalidades de informação:
+
+- descrição textual do problema;
+- imagens anexadas (prints de tela, fotografias ou mensagens de erro);
+- informações do cliente;
+- histórico de atendimentos anteriores;
+- dados operacionais.
+
+O processo de triagem desses chamados é realizado manualmente por analistas especializados, consumindo tempo e tornando o atendimento mais lento.
+
+O objetivo deste Projeto Integrador é desenvolver um Sistema Inteligente Multimodal capaz de automatizar parte desse processo utilizando técnicas modernas de Inteligência Artificial.
+
+### 4.2 Problemas de IA
+
+Ao longo do semestre cada grupo deverá desenvolver modelos capazes de resolver um ou mais dos seguintes problemas:
+
+- Classificação automática da categoria do chamado;
+- Predição da prioridade do atendimento;
+- Estimativa do tempo de resolução;
+- Identificação de reincidências;
+- Sugestão da equipe responsável pelo atendimento.
+
+O principal objetivo do projeto será a classificação automática da categoria do chamado utilizando múltiplas modalidades de dados.
 
 ### Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências
 
@@ -81,6 +116,33 @@ O objetivo é desenvolver um sistema capaz de:
 ## 5. Arquitetura Geral
 
 ![](assets/images/arquitetura.png)
+<!--
+
+```text
+                         Chamados
+                           │
+                ┌──────────┴──────────┐
+                │                     │
+             Texto                Imagem
+                │                     │
+                └──────────┬──────────┘
+                           │
+           Big Data e Engenharia de Dados
+                           │
+            ┌──────────────┴──────────────┐
+            │                             │
+            ▼                             ▼
+ Processamento de                 Visão
+ Linguagem Natural            Computacional
+            │                             │
+            └──────────────┬──────────────┘
+                           │
+                 Deep Learning
+                           │
+                           ▼
+            Sistema Inteligente Final
+```
+-->
 
 ---
 
@@ -100,17 +162,41 @@ Recomenda-se que os professores mantenham reuniões rápidas de alinhamento semp
 
 O Projeto Integrador será desenvolvido ao longo de **8 encontros remotos síncronos**, acompanhando a evolução das disciplinas participantes. A cada aula, os estudantes desenvolverão uma nova etapa da solução, construindo incrementalmente um **Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências**.
 
-Todos os grupos utilizarão o **mesmo [dataset](/materiais/dataset/README.md) oficial**, definido pelos professores no início do semestre.
+Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professores no início do semestre.
 
 ### 7.1. Cronograma das Aulas
 
 <img src="assets/images/cronograma-aulas.png" width="110%">
+<!-- 
+| Data | Objetivo | Professor(es) | Marco | Notebook |
+|:----------:|------------------|---------------|------------------|-------------------|
+| **18/07** | Apresentar, formar grupos, dataset e ambiente. | Todos / **DL+BD** | Planejamento | **01_Exploracao** |
+| **25/07** | Pipeline ETL (limpeza, transformação, partição). | **BD+DL** | Dados preparados | **02_Engenharia_Dados** |
+| **08/08** | Primeiro modelo DL (MLP baseline). | **DL** | Modelo treinado | **03_Deep_Learning** |
+| **22/08** | Módulo PLN para descrições textuais. | **PLN+DL** | PLN concluído | **04_PLN** |
+| **05/09** | Módulo VC para imagens anexadas. | **VC+DL** | VC concluído | **05_Visao_Computacional** |
+| **19/09** | Integrar modelos de texto e imagem (multimodal). | **DL+PLN+VC** | Multimodal integrado | **06_Modelo_Multimodal** |
+| **03/10** | Consolidar, pipeline de inferência, escalabilidade. | **BD+DL** | Sistema integrado | **07_Pipeline_Final** |
+| **17/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto Final** |
+-->
 
 ### 7.2. Entregas Esperadas
 
 Cada notebook representa uma etapa incremental da construção da solução. Ao final do semestre, todos os notebooks deverão compor um único repositório GitHub organizado, documentado e reproduzível.
 
 <img src="assets/images/cronograma-entregas.png" width="110%">
+<!--
+| Notebook | Objetivo | Competências | Conteúdo |
+|----------|----------|----------------------------|-------------------|
+| **01_Exploracao** | Planejar e<br>compreender o<br>problema. | Planejamento, trabalho em equipe, EDA e arquitetura. | Descrição, [dataset](/materiais/dataset/README.md), EDA, arquitetura inicial e planejamento. |
+| **02_Engenharia_Dados** | Preparar dados<br>para os modelos. | Engenharia de Dados, ETL e preparação. | Ingestão, limpeza, transformação, partição treino/validação/teste e documentação. |
+| **03_Deep_Learning** | Desenvolver o<br>primeiro modelo DL. | Redes neurais, treino supervisionado, avaliação. | MLP baseline, treino, ajuste de hiperparâmetros, avaliação e discussão. |
+| **04_PLN** | Desenvolver o<br>módulo PLN. | Pré‑processamento de textos, embeddings, classificação. | Limpeza, embeddings, treino do modelo PLN, avaliação. |
+| **05_Visao_Computacional** | Desenvolver o<br>módulo VC. | Processamento de imagens, CNNs, Transfer Learning. | Preparação das imagens, CNN/Transfer Learning, avaliação. |
+| **06_Modelo_Multimodal** | Integrar texto e<br>imagem em uma<br>solução única. | Modelagem multimodal, fusão de embeddings, comparação. | Early/Late Fusion, treino multimodal, avaliação comparativa e discussão. |
+| **07_Pipeline_Final** | Consolidar a<br>solução do grupo. | Engenharia de IA, pipelines, documentação, implantação. | Pipeline de inferência, organização, documentação, avaliação final e limitações. |
+| **Projeto Final** | Apresentar e<br>defender a<br>solução. | Comunicação técnica, integração, colaboração, apresentação. | Repositório, notebooks, relatório técnico (2p), apresentação (15 min) e demo. |
+-->
 
 ---
 
@@ -142,7 +228,7 @@ Cada grupo deverá entregar:
 
 ### Nota mínima para aprovação
 
-De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 (sete) no Projeto Integrador para aprovação no Módulo I. Frequência mínima exigida: 75%.
+De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 (sete) no Projeto Integrador para aprovação no Módulo II. Frequência mínima exigida: 75%.
 
 ---
 
@@ -238,7 +324,7 @@ Sim, desde que o uso seja informado e documentado no relatório técnico.
 
 ### Podemos utilizar outro dataset?
 
-Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores.
+Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores. Embora o dataset disponibilizado possua tamanho reduzido para fins didáticos, espera-se que as soluções sejam desenvolvidas utilizando técnicas compatíveis com ambientes Big Data. Grupos interessados poderão gerar versões ampliadas do dataset para avaliação de escalabilidade.
 
 ---
 

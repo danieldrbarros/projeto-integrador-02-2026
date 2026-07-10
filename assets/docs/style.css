@@ -267,7 +267,7 @@ h2#arquitetura-geral {
 table {
     width: 100% !important;
     max-width: 100% !important;
-    table-layout: fixed !important;
+    table-layout: auto;
     border-collapse: collapse !important;
     margin: 20px 0;
     font-size: 8.5pt; /* Compacta para caber */
