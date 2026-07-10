@@ -1,7 +1,6 @@
 import pandas as pd
 import random
 import os
-from PIL import Image, ImageDraw, ImageFont
 
 # --------------------------------------------
 # 1. CONFIGURAÇÕES DE CAMINHO
@@ -11,7 +10,6 @@ CHAMADOS_PATH = os.path.join(BASE_DIR, 'chamados.csv')
 CLIENTES_PATH = os.path.join(BASE_DIR, 'clientes.csv')
 HISTORICO_PATH = os.path.join(BASE_DIR, 'historico.csv')
 SAIDA_PATH = os.path.join(BASE_DIR, 'chamados_enriquecido.csv')
-IMAGES_DIR = os.path.join(BASE_DIR, 'images')
 
 # --------------------------------------------
 # 2. CARREGAR DADOS
@@ -94,7 +92,6 @@ substituicoes = {
     'sistema_financeiro': ['ERP', 'SAP', 'Sistema de contabilidade', 'Módulo de notas fiscais', 'Sistema de tesouraria']
 }
 
-
 def gerar_descricao(categoria):
     template = random.choice(templates.get(categoria, templates['Hardware']))
     for chave, opcoes in substituicoes.items():
@@ -103,52 +100,14 @@ def gerar_descricao(categoria):
             template = template.replace(placeholder, random.choice(opcoes))
     return template
 
-
 df_chamados['description'] = df_chamados['target_category'].apply(gerar_descricao)
 df_chamados['title'] = df_chamados['description'].apply(lambda x: x[:60] + ('...' if len(x) > 60 else ''))
 
-
 # --------------------------------------------
-# 5. GERAR IMAGENS SINTÉTICAS
+# 5. MANTER IMAGENS ORIGINAIS (sem gerar novas)
 # --------------------------------------------
-def gerar_imagem(categoria, idx):
-    img = Image.new('RGB', (224, 224), color=(255, 255, 255))
-    draw = ImageDraw.Draw(img)
-
-    cores = {
-        'Hardware': (220, 50, 50),
-        'Software': (50, 180, 50),
-        'Rede': (50, 50, 220),
-        'RH': (200, 200, 50),
-        'Financeiro': (200, 50, 200),
-        'Acesso': (50, 180, 200)
-    }
-    cor = cores.get(categoria, (100, 100, 100))
-
-    draw.rectangle([10, 10, 214, 214], fill=cor, outline=(0, 0, 0), width=2)
-
-    try:
-        font = ImageFont.truetype("arial.ttf", 24)
-    except:
-        font = ImageFont.load_default()
-    draw.text((20, 20), categoria, fill=(255, 255, 255), font=font)
-
-    for _ in range(random.randint(2, 5)):
-        x1 = random.randint(30, 190)
-        y1 = random.randint(30, 190)
-        x2 = x1 + random.randint(10, 40)
-        y2 = y1 + random.randint(10, 40)
-        draw.ellipse([x1, y1, x2, y2], outline=(255, 255, 255), width=2)
-
-    os.makedirs(IMAGES_DIR, exist_ok=True)
-    filename = os.path.join(IMAGES_DIR, f'img_{idx:06d}.jpg')
-    img.save(filename)
-    return filename
-
-
-df_chamados['image_path'] = df_chamados.apply(lambda row: gerar_imagem(row['target_category'], row.name), axis=1)
-df_chamados['image_width'] = 224
-df_chamados['image_height'] = 224
+# As colunas image_path, image_width e image_height já existem em df_chamados
+# e serão mantidas inalteradas.
 
 # --------------------------------------------
 # 6. INCORPORAR DADOS DE CLIENTES
@@ -158,55 +117,49 @@ df_enriquecido = df_chamados.merge(df_clientes, on='customer_id', how='left')
 # --------------------------------------------
 # 7. INCORPORAR DADOS DE HISTÓRICO (agregações)
 # --------------------------------------------
-# Agrupar por ticket_id para contar eventos e extrair informações
 historico_agg = df_historico.groupby('ticket_id').agg(
     num_events=('history_id', 'count'),
     last_event_date=('event_date', 'max'),
     event_types=('event_type', lambda x: '|'.join(x.unique()))
 ).reset_index()
 
-# Contar tipos de eventos separadamente usando pivot_table
 pivot = df_historico.pivot_table(index='ticket_id', columns='event_type', aggfunc='size', fill_value=0).reset_index()
-# Renomear colunas para nomes padronizados
 rename_map = {'Abertura': 'num_abertura', 'Atualização': 'num_updates', 'Imagem': 'num_images',
               'Encerramento': 'num_encerramento'}
 pivot.rename(columns=rename_map, inplace=True)
 
-# Mesclar com o agregado principal
 historico_agg = historico_agg.merge(pivot, on='ticket_id', how='left')
 
-# Garantir que todas as colunas esperadas existam em historico_agg
+# Garantir que todas as colunas esperadas existam
 cols_esperadas = ['num_images', 'num_updates', 'num_abertura', 'num_encerramento']
 for col in cols_esperadas:
     if col not in historico_agg.columns:
         historico_agg[col] = 0
 
-# Agora fazer o merge
+# Mesclar com o DataFrame principal
 df_enriquecido = df_enriquecido.merge(historico_agg, on='ticket_id', how='left')
 
-# E também garantir que estas colunas existam em df_enriquecido
-for col in cols_esperadas:
-    if col not in df_enriquecido.columns:
-        df_enriquecido[col] = 0
-
-# Preencher nulos
+# Preencher nulos e garantir tipos
 df_enriquecido['num_events'] = df_enriquecido['num_events'].fillna(0).astype(int)
-df_enriquecido['num_images'] = df_enriquecido['num_images'].fillna(0).astype(int)
-df_enriquecido['num_updates'] = df_enriquecido['num_updates'].fillna(0).astype(int)
 df_enriquecido['last_event_date'] = df_enriquecido['last_event_date'].fillna('')
 df_enriquecido['event_types'] = df_enriquecido['event_types'].fillna('')
 
-# As colunas de contagem adicionais (num_abertura, num_encerramento) podem ser úteis, mas não obrigatórias
-# Vamos preencher também se existirem
-for col in ['num_abertura', 'num_encerramento']:
+for col in cols_esperadas:
     if col in df_enriquecido.columns:
         df_enriquecido[col] = df_enriquecido[col].fillna(0).astype(int)
 
 # --------------------------------------------
-# 8. SALVAR
+# 8. MOVER target_category PARA A ÚLTIMA COLUNA
+# --------------------------------------------
+if 'target_category' in df_enriquecido.columns:
+    cols = [c for c in df_enriquecido.columns if c != 'target_category'] + ['target_category']
+    df_enriquecido = df_enriquecido[cols]
+
+# --------------------------------------------
+# 9. SALVAR
 # --------------------------------------------
 df_enriquecido.to_csv(SAIDA_PATH, index=False)
 
 print(f"✅ Dataset enriquecido salvo em: {SAIDA_PATH}")
 print(f"Total de registros: {len(df_enriquecido)}")
-print(f"Imagens geradas em: {IMAGES_DIR}")
+print("As imagens originais foram mantidas (sem geração sintética).")
