@@ -1,5 +1,0 @@
-customer_id,company,segment,employees,city,state,contract_type,customer_since,vip,monthly_revenue
-2001,Empresa Alpha,Financeiro,350,São Paulo,SP,Premium,2018-03-12,Sim,180000
-2002,Empresa Beta,Saúde,120,Campinas,SP,Standard,2021-06-02,Não,45000
-2003,Empresa Gama,Indústria,980,Santos,SP,Enterprise,2015-09-21,Sim,320000
-2004,Empresa Delta,Tecnologia,85,Curitiba,PR,Standard,2022-11-01,Não,25000
