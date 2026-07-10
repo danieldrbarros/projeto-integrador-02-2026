@@ -60,6 +60,7 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 | **VC** | Visão Computacional | Silvio Stanzani |
 | **DL** | Fundamentos de Deep Learning | Daniel Barros |
 -->
+
 ---
 
 ## 4. Tema do Projeto
