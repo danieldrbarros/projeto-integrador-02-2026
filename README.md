@@ -51,15 +51,15 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 
 ## 3. Disciplinas Envolvidas
 
-<!-- ![](assets/images/disciplinas.png) -->
-
+![](assets/images/disciplinas.png)
+<!-- 
 | Sigla | Disciplina | Professor |
 |-------|------------|-----------|
 | **BD** | Big Data e Engenharia de Dados | Daniel Carvalho |
 | **PLN** | Processamento de Linguagem Natural | Gabriel Santos |
 | **VC** | Visão Computacional | Silvio Stanzani |
 | **DL** | Fundamentos de Deep Learning | Daniel Barros |
-
+-->
 ---
 
 ## 4. Tema do Projeto
@@ -68,7 +68,7 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 
 Uma empresa nacional de suporte de TI atende centenas de clientes corporativos e recebe milhares de chamados técnicos todos os meses.
 
-Cada chamado pode conter diferentes modalidades de informação:
+Cada chamado pode conter diferentes modalidades de informação, tais como:
 
 - descrição textual do problema;
 - imagens anexadas (prints de tela, fotografias ou mensagens de erro);
@@ -76,40 +76,29 @@ Cada chamado pode conter diferentes modalidades de informação:
 - histórico de atendimentos anteriores;
 - dados operacionais.
 
-O processo de triagem desses chamados é realizado manualmente por analistas especializados, consumindo tempo e tornando o atendimento mais lento.
+Atualmente, a triagem desses chamados é realizada manualmente por analistas especializados, que precisam interpretar as informações disponíveis, identificar o tipo de problema, definir sua prioridade e encaminhá-lo para a equipe responsável. Esse processo demanda tempo, é suscetível a inconsistências e impacta diretamente o tempo de atendimento ao cliente.
 
-O objetivo deste Projeto Integrador é desenvolver um Sistema Inteligente Multimodal capaz de automatizar parte desse processo utilizando técnicas modernas de Inteligência Artificial.
+Neste Projeto Integrador, os estudantes deverão desenvolver uma solução baseada em Inteligência Artificial capaz de automatizar parte desse processo, utilizando técnicas modernas de Engenharia de Dados, Processamento de Linguagem Natural, Visão Computacional e Deep Learning.
 
-### 4.2 Problemas de IA
+### 4.2 Objetivos do Sistema Inteligente
 
-Ao longo do semestre cada grupo deverá desenvolver modelos capazes de resolver um ou mais dos seguintes problemas:
+Ao final do semestre, espera-se que cada grupo desenvolva um **Sistema Inteligente Multimodal** capaz de:
 
-- Classificação automática da categoria do chamado;
-- Predição da prioridade do atendimento;
-- Estimativa do tempo de resolução;
-- Identificação de reincidências;
-- Sugestão da equipe responsável pelo atendimento.
+- compreender informações textuais presentes nos chamados;
+- analisar imagens anexadas como evidências;
+- integrar diferentes modalidades de dados (texto, imagem, histórico e informações do cliente);
+- classificar automaticamente a categoria do chamado;
+- predizer a prioridade do atendimento;
+- estimar o tempo de resolução;
+- identificar possíveis reincidências;
+- sugerir a equipe responsável pelo atendimento;
+- auxiliar o processo de triagem e tomada de decisão dos analistas.
 
-O principal objetivo do projeto será a classificação automática da categoria do chamado utilizando múltiplas modalidades de dados.
+### 4.3 Problemas de Inteligência Artificial
 
-### Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências
+Embora o sistema possa contemplar diferentes funcionalidades, o **objetivo principal** do Projeto Integrador será o desenvolvimento de um modelo capaz de **classificar automaticamente a categoria dos chamados**, utilizando múltiplas modalidades de dados.
 
-Imagine uma empresa que recebe milhares de chamados contendo:
-
-- descrição textual;
-- imagens anexadas;
-- dados históricos;
-- informações do cliente;
-- informações operacionais.
-
-O objetivo é desenvolver um sistema capaz de:
-
-- compreender o texto;
-- analisar as imagens;
-- combinar diferentes modalidades de dados;
-- classificar automaticamente o chamado;
-- sugerir prioridade;
-- auxiliar o processo de atendimento.
+As demais funcionalidades (predição de prioridade, estimativa do tempo de resolução, identificação de reincidências e sugestão da equipe responsável) representam extensões naturais da solução e poderão ser exploradas pelos grupos conforme a evolução do projeto e os conteúdos desenvolvidos nas disciplinas participantes.
 
 ---
 
