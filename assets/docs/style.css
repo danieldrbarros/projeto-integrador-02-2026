@@ -323,10 +323,9 @@ tbody tr:nth-child(even){
 /* alignment */
 
 th:first-child,
-td:first-child{
-
-    text-align:left;
-
+td:first-child {
+    text-align: left;
+    white-space: nowrap;  
 }
 
 th:not(:first-child),
