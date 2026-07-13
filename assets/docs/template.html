@@ -18,6 +18,11 @@ $if(date-meta)$
     <meta name="date" content="$date-meta$">
 $endif$
 
+$if(css)$
+    $for(css)$
+        <link rel="stylesheet" href="$css$">
+    $endfor$
+$endif$
 
 </head>
 
@@ -33,9 +38,9 @@ $endif$
 
         <div class="cover-institution">
 
-            <h1 class="cover-title-main">
+            <h2 class="cover-title-main">
                 PONTIFÍCIA UNIVERSIDADE CATÓLICA DE SÃO PAULO
-            </h1>
+            </h2
 
             <h2 class="cover-title-secondary">
                 Especialização em Inteligência Artificial
