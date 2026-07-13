@@ -1,6 +1,6 @@
 ## Sobre o Projeto
 
-O Projeto Integrador tem como objetivo agregar os conhecimentos desenvolvidos nas disciplinas da Pós-Graduação em Inteligência Artificial por meio da construção de uma solução baseada em Inteligência Artificial aplicada a um problema real.
+O Projeto Integrador tem como objetivo agregar os conhecimentos desenvolvidos nas disciplinas da Pós-Graduação em Inteligência Artificial por meio da construção de uma solução baseada em Inteligência Artificial aplicada a um problema real de negócios.
 
 Durante o semestre, os estudantes desenvolverão incrementalmente um **Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências**, explorando conceitos de *Big Data e Engenharia de Dados*, *Processamento de Linguagem Natural*, *Visão Computacional*, e *Deep Learning*.
 
@@ -26,7 +26,7 @@ Todo o desenvolvimento deverá ser realizado em equipes utilizando GitHub como f
 
 Ao final do Projeto Integrador espera-se que os estudantes sejam capazes de:
 
-1. Trabalhar em equipes utilizando GitHub;
+1. Trabalhar em equipes utilizando GitHub para gestão do código fonte e também do projeto;
 2. Desenvolver pipelines de Big Data e Engenharia de Dados;
 3. Aplicar técnicas modernas de Processamento de Linguagem Natural;
 4. Desenvolver modelos de Visão Computacional;
@@ -75,7 +75,7 @@ Cada chamado pode conter diferentes modalidades de informação, tais como:
 
 Atualmente, a triagem desses chamados é realizada manualmente por analistas especializados, que precisam interpretar as informações disponíveis, identificar o tipo de problema, definir sua prioridade e encaminhá-lo para a equipe responsável. Esse processo demanda tempo, é suscetível a inconsistências e impacta diretamente o tempo de atendimento ao cliente.
 
-Neste Projeto Integrador, os estudantes deverão desenvolver uma solução baseada em Inteligência Artificial capaz de automatizar parte desse processo, utilizando técnicas modernas de Engenharia de Dados, Processamento de Linguagem Natural, Visão Computacional e Deep Learning.
+Neste Projeto Integrador, os estudantes deverão desenvolver uma solução baseada em Inteligência Artificial capaz de automatizar parte desse processo, utilizando técnicas modernas de Big Data e Engenharia de Dados, Processamento de Linguagem Natural, Visão Computacional e Deep Learning.
 
 ### Objetivos do Sistema Inteligente
 
@@ -190,6 +190,9 @@ Cada grupo deverá entregar:
 - Apresentação final (15 minutos);
 - Demonstração da solução.
 
+* Não é necessário fazer DOCX ou PPTX, pois o projeto deve ser entregue em formato notebook .ipynb no GitHub
+ 
+
 ---
 
 ## Critérios de Avaliação
@@ -216,6 +219,7 @@ De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 
 
 - Git
 - GitHub
+- Google Colab
 - Python
 - Jupyter Notebook
 - Pandas
@@ -224,7 +228,9 @@ De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 
 - TensorFlow
 - Hugging Face Transformers
 - OpenCV
+- SQL
 - Apache Spark
+- PySpark
 
 ---
 
@@ -272,10 +278,13 @@ Recomenda-se:
 
 O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
-- **Privacidade**: Serão utilizados exclusivamente dados sintéticos ou anonimizados. Nenhum dado pessoal ou sensível será processado.
-- **Viés algorítmico**: Os modelos serão avaliados quanto a possíveis vieses que possam impactar negativamente grupos específicos.
-- **Transparência**: Todo o código, dados e metodologia estarão disponíveis publicamente no GitHub, garantindo reprodutibilidade.
-- **Finalidade**: O projeto tem fins exclusivamente acadêmicos e visa contribuir para o aprendizado e desenvolvimento de habilidades em IA.
+**Privacidade**: Serão utilizados exclusivamente dados sintéticos ou anonimizados. Nenhum dado pessoal ou sensível será processado.
+
+**Viés algorítmico**: Os modelos serão avaliados quanto a possíveis vieses que possam impactar negativamente grupos específicos.
+
+**Transparência**: Todo o código, dados e metodologia estarão disponíveis publicamente no GitHub, garantindo reprodutibilidade.
+
+**Finalidade**: O projeto tem fins exclusivamente acadêmicos e visa contribuir para o aprendizado e desenvolvimento de habilidades em IA.
 
 ---
 
