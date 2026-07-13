@@ -281,13 +281,9 @@ O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
 ## FAQ
 
-- Podemos utilizar TensorFlow?
+Podemos utilizar TensorFlow? **Sim**.
 
-Sim.
-
-- Podemos utilizar PyTorch?
-
-Sim.
+Podemos utilizar PyTorch? **Sim**.
 
 - Podemos utilizar outros modelos além dos apresentados em aula?
 
@@ -309,9 +305,9 @@ Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos 
 
 ## Referências Bibliográficas
 
-1. ZHANG, Aston et al. Dive into Deep Learning. 2024. Disponível em: https://d2l.ai/index.html. Acesso em: 17 set.2025.
+ZHANG, Aston et al. Dive into Deep Learning. 2024. Disponível em: https://d2l.ai/index.html. Acesso em: 17 set.2025.
 
-2. CHOLLET, François. Deep Learning with Python. Greenwich: Manning Publications, 2018.
+CHOLLET, François. Deep Learning with Python. Greenwich: Manning Publications, 2018.
 
 3. BIRD, Steven; KLEIN, Ewan; LOPER, Edward. Natural Language Processing with Python. Sebastopol: O’Reilly
 Media, 2009.
