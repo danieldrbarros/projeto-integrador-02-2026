@@ -154,14 +154,14 @@ Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professo
 
 | Data | Objetivo | Professor(es) | Marco | Notebook |
 |:----------:|------------------|---------------|------------------|-------------------|
-| **18/7** | Apresentar, formar grupos, dataset e ambiente | Todos / **DL+BD** | Planejamento | **1_Exploracao** |
-| **25/7** | Pipeline ETL (limpeza, transformação, partição) | **BD+DL** | Dados preparados | **2_Engenharia_Dados** |
-| **8/8** | Primeiro modelo DL (MLP baseline) | **DL** | Modelo treinado | **3_Deep_Learning** |
-| **22/8** | Módulo PLN para descrições textuais | **PLN+DL** | PLN concluído | **4_PLN** |
-| **5/9** | Módulo VC para imagens anexadas | **VC+DL** | VC concluído | **5_Visao_Computacional** |
-| **19/9** | Integrar modelos de texto e imagem (multimodal) | **DL+PLN+VC** | Multimodal integrado | **6_Modelo_Multimodal** |
-| **3/10** | Consolidar, pipeline de inferência, escalabilidade | **BD+DL** | Sistema integrado | **7_Pipeline_Final** |
-| **17/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto_Final** |
+| **18/7** | Apresentar, formar grupos, dataset e ambiente | **BD** | Planejamento | **1_Exploracao** |
+| **8/8** | Pipeline ETL (limpeza, transformação, partição) | **BD+DL** | Dados preparados | **2_Engenharia_Dados** |
+| **22/8** | Primeiro modelo DL (MLP baseline) | **DL** | Modelo treinado | **3_Deep_Learning** |
+| **5/9** | Módulo VC para imagens anexadas | **VC+DL** | VC concluído | **4_Visao_Computacional** |
+| **19/9** | Módulo PLN para descrições textuais | **PLN** | PLN concluído | **5_PLN** |
+| **3/10** | Integrar modelos de texto e imagem (multimodal) | **DL+PLN+VC** | Multimodal integrado | **6_Modelo_Multimodal** |
+| **17/10** | Consolidar, pipeline de inferência, escalabilidade | **BD+DL** | Sistema integrado | **7_Pipeline_Final** |
+| **31/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto_Final** |
 
 ### Entregas Esperadas
 
@@ -172,8 +172,8 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 | **1_Exploracao** | Planejar e compreender o problema. | Planejamento, trabalho em equipe, EDA e arquitetura. | Descrição, [dataset](/materiais/dataset/README.md), EDA, arquitetura inicial e planejamento. |
 | **2_Engenharia_Dados** | Preparar dados para os modelos. | Engenharia de Dados, ETL e preparação. | Ingestão, limpeza, transformação, partição treino/validação/teste e documentação. |
 | **3_Deep_Learning** | Desenvolver o primeiro modelo DL. | Redes neurais, treino supervisionado, avaliação. | MLP baseline, treino, ajuste de hiperparâmetros, avaliação e discussão. |
-| **4_PLN** | Desenvolver o módulo PLN. | Pré‑processamento de textos, embeddings, classificação. | Limpeza, embeddings, treino do modelo PLN, avaliação. |
-| **5_Visao_Computacional** | Desenvolver o módulo VC. | Processamento de imagens, CNNs, Transfer Learning. | Preparação das imagens, CNN/Transfer Learning, avaliação. |
+| **4_Visao_Computacional** | Desenvolver o módulo VC. | Processamento de imagens, CNNs, Transfer Learning. | Preparação das imagens, CNN/Transfer Learning, avaliação. |
+| **5_PLN** | Desenvolver o módulo PLN. | Pré‑processamento de textos, embeddings, classificação. | Limpeza, embeddings, treino do modelo PLN, avaliação. |
 | **6_Modelo_Multimodal** | Integrar texto e imagem em uma solução única. | Modelagem multimodal, fusão de embeddings, comparação. | Early/Late Fusion, treino multimodal, avaliação comparativa e discussão. |
 | **7_Pipeline_Final** | Consolidar a solução do grupo. | Engenharia de IA, pipelines, documentação, implantação. | Pipeline de inferência, organização, documentação, avaliação final e limitações. |
 | **Projeto_Final** | Apresentar e defender a solução. | Comunicação técnica, integração, colaboração, apresentação. | Repositório, notebooks, relatório técnico (2p), apresentação (15 min) e demo. |
@@ -190,7 +190,7 @@ Cada grupo deverá entregar:
 - Apresentação final (15 minutos);
 - Demonstração da solução.
 
-* Não é necessário fazer DOCX ou PPTX, pois o projeto deve ser entregue em formato notebook .ipynb no GitHub
+*Não é necessário fazer DOCX ou PPTX, pois o projeto deve ser entregue em formato notebook .ipynb no GitHub*
  
 
 ---
@@ -247,6 +247,7 @@ grupo-XX/
 │   ├── 05_Visao_Computacional.ipynb
 │   ├── 06_Modelo_Multimodal.ipynb
 │   └── 07_Pipeline_Final.ipynb
+│   └── 07_Projeto_Final.ipynb
 ├── models/
 ├── reports/
 ├── presentation/
