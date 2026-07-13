@@ -8,7 +8,7 @@
 
 @page {
     size: A4;
-    margin: 2.5cm 2cm 2.5cm 2cm;
+    margin: 1.8cm 2cm 2.5cm 2cm;
 
     @top-left {
         content: "Projeto Integrador II — PUC-SP";
