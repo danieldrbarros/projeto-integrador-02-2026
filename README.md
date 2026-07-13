@@ -285,21 +285,13 @@ Podemos utilizar TensorFlow? **Sim**.
 
 Podemos utilizar PyTorch? **Sim**.
 
-- Podemos utilizar outros modelos além dos apresentados em aula?
+Podemos utilizar outros modelos além dos apresentados em aula? **Sim, desde que devidamente documentados.**
 
-Sim, desde que devidamente documentados.
+Podemos utilizar bibliotecas adicionais? **Sim.**
 
-- Podemos utilizar bibliotecas adicionais?
+Podemos utilizar Inteligência Artificial Generativa? **Sim, desde que o uso seja informado e documentado no relatório técnico.**
 
-Sim.
-
-- Podemos utilizar Inteligência Artificial Generativa?
-
-Sim, desde que o uso seja informado e documentado no relatório técnico.
-
-- Podemos utilizar outro dataset?
-
-Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores. Embora o dataset disponibilizado possua tamanho reduzido para fins didáticos, espera-se que as soluções sejam desenvolvidas utilizando técnicas compatíveis com ambientes Big Data. Grupos interessados poderão gerar versões ampliadas do dataset para avaliação de escalabilidade.
+Podemos utilizar outro dataset? **Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores. Embora o dataset disponibilizado possua tamanho reduzido para fins didáticos, espera-se que as soluções sejam desenvolvidas utilizando técnicas compatíveis com ambientes Big Data. Grupos interessados poderão gerar versões ampliadas do dataset para avaliação de escalabilidade.**
 
 ---
 
@@ -309,27 +301,27 @@ ZHANG, Aston et al. Dive into Deep Learning. 2024. Disponível em: https://d2l.a
 
 CHOLLET, François. Deep Learning with Python. Greenwich: Manning Publications, 2018.
 
-3. BIRD, Steven; KLEIN, Ewan; LOPER, Edward. Natural Language Processing with Python. Sebastopol: O’Reilly
+BIRD, Steven; KLEIN, Ewan; LOPER, Edward. Natural Language Processing with Python. Sebastopol: O’Reilly
 Media, 2009.
 
-4. SILGE, Julia; ROBINSON, David. Text Mining with R. Sebastopol: O’Reilly Media, 2017.
+SILGE, Julia; ROBINSON, David. Text Mining with R. Sebastopol: O’Reilly Media, 2017.
 
-5. FORSYTH, David A.; PONCE, Jean. Computer Vision: A Modern Approach. 2. ed. Boston: Pearson, 2011.
+FORSYTH, David A.; PONCE, Jean. Computer Vision: A Modern Approach. 2. ed. Boston: Pearson, 2011.
 
-6. SZELISKI, Richard. Computer Vision: Algorithms and Applications. New York: Springer, 2010.
+SZELISKI, Richard. Computer Vision: Algorithms and Applications. New York: Springer, 2010.
 
-7. CHAMBERS, Bill; ZAHARIA, Matei. Spark: The Definitive Guide: Big Data Processing Made Simple. Sebastopol:
+CHAMBERS, Bill; ZAHARIA, Matei. Spark: The Definitive Guide: Big Data Processing Made Simple. Sebastopol:
 O’Reilly Media, 2018.
 
-8. LAKSHMANAN, Valliappa; ROBINSON, Sara; MUNN, Michael. Machine Learning Design Patterns: Solutions to
+LAKSHMANAN, Valliappa; ROBINSON, Sara; MUNN, Michael. Machine Learning Design Patterns: Solutions to
 Common Challenges in Machine Learning. Sebastopol: O’Reilly Media, 2020.
 
-9. TREVEIL, Mark et al. Introducing MLOps: How to Scale Machine Learning in the Enterprise. Sebastopol: O’Reilly
+TREVEIL, Mark et al. Introducing MLOps: How to Scale Machine Learning in the Enterprise. Sebastopol: O’Reilly
 Media, 2020.
 
-10. GÉRON, Aurélien. Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow. 2. ed. Sebastopol:
+GÉRON, Aurélien. Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow. 2. ed. Sebastopol:
 O’Reilly Media, 2019.
 
-11. ROSEBROCK, Adrian. Deep Learning for Computer Vision with Python. PyImageSearch, 2017.
+ROSEBROCK, Adrian. Deep Learning for Computer Vision with Python. PyImageSearch, 2017.
 
 ---
