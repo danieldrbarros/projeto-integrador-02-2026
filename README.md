@@ -48,7 +48,7 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 
 ---
 
-## 3. Disciplinas Envolvidas
+## Disciplinas Envolvidas
 
 <!-- ![](assets/images/disciplinas.png) --> 
 | Sigla | Disciplina | Professor |
@@ -60,9 +60,9 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 
 ---
 
-## 4. Tema do Projeto
+## Tema do Projeto
 
-### 4.1 Contexto do Problema
+### Contexto do Problema
 
 Uma empresa nacional de suporte de TI atende centenas de clientes corporativos e recebe milhares de chamados técnicos todos os meses.
 
@@ -78,7 +78,7 @@ Atualmente, a triagem desses chamados é realizada manualmente por analistas esp
 
 Neste Projeto Integrador, os estudantes deverão desenvolver uma solução baseada em Inteligência Artificial capaz de automatizar parte desse processo, utilizando técnicas modernas de Engenharia de Dados, Processamento de Linguagem Natural, Visão Computacional e Deep Learning.
 
-### 4.2 Objetivos do Sistema Inteligente
+### Objetivos do Sistema Inteligente
 
 Ao final do semestre, espera-se que cada grupo desenvolva um **Sistema Inteligente Multimodal** capaz de:
 
@@ -92,7 +92,7 @@ Ao final do semestre, espera-se que cada grupo desenvolva um **Sistema Inteligen
 - sugerir a equipe responsável pelo atendimento;
 - auxiliar o processo de triagem e tomada de decisão dos analistas.
 
-### 4.3 Problemas de Inteligência Artificial
+### Problemas de Inteligência Artificial
 
 Embora o sistema possa contemplar diferentes funcionalidades, o **objetivo principal** do Projeto Integrador será o desenvolvimento de um modelo capaz de **classificar automaticamente a categoria dos chamados**, utilizando múltiplas modalidades de dados.
 
@@ -100,7 +100,7 @@ As demais funcionalidades (predição de prioridade, estimativa do tempo de reso
 
 ---
 
-## 5. Arquitetura Geral
+## Arquitetura Geral
 
 ![](assets/images/arquitetura.png)
 <!--
@@ -133,7 +133,7 @@ As demais funcionalidades (predição de prioridade, estimativa do tempo de reso
 
 ---
 
-## 6. Organização entre os Professores
+## Organização entre os Professores
 
 Cada professor permanece responsável pelos conteúdos da sua disciplina.
 
@@ -145,13 +145,13 @@ Recomenda-se que os professores mantenham reuniões rápidas de alinhamento semp
 
 ---
 
-## 7. Cronograma
+## Cronograma
 
 O Projeto Integrador será desenvolvido ao longo de **8 encontros remotos síncronos**, acompanhando a evolução das disciplinas participantes. A cada aula, os estudantes desenvolverão uma nova etapa da solução, construindo incrementalmente um **Sistema Inteligente Multimodal para Análise Automática de Chamados e Evidências**.
 
 Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professores no início do semestre.
 
-### 7.1. Cronograma das Aulas
+### Cronograma das Aulas
 
 <img src="assets/images/cronograma-aulas.png" width="110%">
 <!-- 
@@ -167,7 +167,7 @@ Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professo
 | **17/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto Final** |
 -->
 
-### 7.2. Entregas Esperadas
+### Entregas Esperadas
 
 Cada notebook representa uma etapa incremental da construção da solução. Ao final do semestre, todos os notebooks deverão compor um único repositório GitHub organizado, documentado e reproduzível.
 
@@ -187,7 +187,7 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 
 ---
 
-## 8. Produto Final
+## Produto Final
 
 Cada grupo deverá entregar:
 
@@ -199,7 +199,7 @@ Cada grupo deverá entregar:
 
 ---
 
-## 9. Critérios de Avaliação
+## Critérios de Avaliação
 
 | Critério | Disciplina Relacionada | Peso |
 |----------|------------------------|:----:|
@@ -219,7 +219,7 @@ De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 
 
 ---
 
-## 10. Tecnologias Sugeridas
+## Tecnologias Sugeridas
 
 - Git
 - GitHub
@@ -235,7 +235,7 @@ De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 
 
 ---
 
-## 11. Estrutura Esperada dos Repositórios dos Grupos
+## Estrutura Esperada dos Repositórios dos Grupos
 
 ```
 grupo-XX/
@@ -262,7 +262,7 @@ grupo-XX/
 
 ---
 
-## 12. Organização do Projeto
+## Organização do Projeto
 
 Cada grupo deverá utilizar GitHub durante todo o desenvolvimento.
 
@@ -276,7 +276,7 @@ Recomenda-se:
 
 ---
 
-## 13. Considerações Finais e Ética
+## Considerações Finais e Ética
 
 O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
@@ -287,7 +287,7 @@ O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
 ---
 
-## 14. FAQ
+## FAQ
 
 ### Podemos utilizar TensorFlow?
 
@@ -315,7 +315,7 @@ Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos 
 
 ---
 
-## 15. Referências Bibliográficas
+## Referências Bibliográficas
 
 [1] ZHANG, Aston et al. Dive into Deep Learning. 2024. Disponível em: https://d2l.ai/index.html. Acesso em: 17 set.2025.
 
