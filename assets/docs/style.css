@@ -1,390 +1,470 @@
-/* ==========================================================
-   Projeto Integrador 02/2026 - Versão Final com Correções
-   Estilo Otimizado para Pandoc + WeasyPrint (Padrão Acadêmico)
-   ========================================================== */
+/* ==========================================================================
+   Projeto Integrador - Professional Pandoc + WeasyPrint Style
+   ========================================================================== */
 
-/* ==========================================================
-   CONFIGURAÇÕES DA PÁGINA (A4)
-   ========================================================== */
+/* ==========================================================================
+   PAGE
+   ========================================================================== */
+
 @page {
     size: A4;
-    margin: 3.5cm 2cm 2.5cm 2cm;
+    margin: 2.5cm 2cm 2.5cm 2cm;
 
     @top-left {
         content: "Projeto Integrador II — PUC-SP";
         font-size: 8pt;
         color: #0F4C81;
         font-weight: bold;
-        letter-spacing: 0.5px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #0F4C81;
     }
+
     @top-right {
-        content: "Especialização em IA";
+        content: "Especialização em Inteligência Artificial";
         font-size: 8pt;
         color: #0F4C81;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #0F4C81;
     }
+
     @bottom-center {
-        content: "Projeto Integrador II — PUC-SP";
-        font-size: 7pt;
-        color: #999999;
-        letter-spacing: 0.3px;
-    }
-    @bottom-right {
         content: counter(page);
-        font-size: 8.5pt;
-        color: #0F4C81;
-        font-weight: bold;
+        font-size: 8pt;
+        color: #666;
     }
 }
 
-/* Remove completamente o cabeçalho e rodapé da capa */
-@page :first {
-    margin: 2cm 2cm 2cm 2cm;
-    @top-left { content: normal; border-bottom: none; }
-    @top-right { content: normal; border-bottom: none; }
-    @bottom-center { content: normal; }
-    @bottom-right { content: normal; }
+@page:first {
+    @top-left { content: none; }
+    @top-right { content: none; }
+    @bottom-center { content: none; }
 }
 
-/* ==========================================================
-   CORPO PRINCIPAL
-   ========================================================== */
-body {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 11pt;
-    line-height: 1.6;
-    color: #222222;
+/* ==========================================================================
+   BODY
+   ========================================================================== */
+
+html{
+    font-size:11pt;
 }
 
-/* ==========================================================
-   CAPA - CENTRALIZAÇÃO PERFEITA (FLEXBOX)
-   ========================================================== */
-.cover-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding: 0 1cm;
-    box-sizing: border-box;
-    page-break-after: always;
+body{
+
+    font-family:"Times New Roman", Times, serif;
+
+    color:#222;
+
+    line-height:1.6;
+
+    margin:0;
+
+    padding:0;
+
+    text-align:justify;
+
 }
 
-.cover-content {
-    width: 100%;
+/* ==========================================================================
+   COVER
+   ========================================================================== */
+
+.cover-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    text-align:center;
+
+    page-break-after:always;
+
 }
 
-.cover-institution {
-    margin-bottom: 4cm;
+.cover-page h1{
+
+    color:#0F4C81;
+
+    font-size:28pt;
+
+    margin-bottom:15px;
+
 }
 
-.cover-title-main {
-    font-size: 16pt;
-    font-weight: bold;
-    color: #0F4C81;
-    letter-spacing: 1px;
-    margin: 5px 0;
+.cover-page h2{
+
+    border:none;
+
+    padding:0;
+
+    margin:0;
+
+    color:#444;
+
 }
 
-.cover-title-secondary {
-    font-size: 12pt;
-    font-weight: normal;
-    color: #333333;
-    margin: 4px 0;
+/* ==========================================================================
+   TABLE OF CONTENTS
+   ========================================================================== */
+
+#toc{
+
+    page-break-after:always;
+
 }
 
-.cover-title-tertiary {
-    font-size: 13pt;
-    font-weight: 600;
-    color: #0F4C81;
-    margin-top: 15px;
+#toc ul{
+
+    list-style:none;
+
+    padding-left:0;
+
 }
 
-.cover-divider {
-    margin: 1.5cm auto;
-    width: 60%;
+#toc li{
+
+    margin:5px 0;
+
 }
 
-.cover-divider hr {
-    border: none;
-    border-top: 2px solid #0F4C81;
+#toc a{
+
+    text-decoration:none;
+
+    color:#0F4C81;
+
 }
 
-.cover-project {
-    margin-bottom: 4cm;
+/* ==========================================================================
+   HEADINGS
+   ========================================================================== */
+
+h1{
+
+    color:#0F4C81;
+
+    font-size:18pt;
+
+    border-bottom:2px solid #0F4C81;
+
+    margin-top:1.5cm;
+
+    margin-bottom:18px;
+
+    page-break-after:avoid;
+
 }
 
-.cover-project-title {
-    font-size: 24pt;
-    font-weight: bold;
-    color: #0F4C81;
-    margin: 5px 0;
-    line-height: 1.2;
+h2{
+
+    color:#0F4C81;
+
+    font-size:15pt;
+
+    margin-top:24px;
+
+    margin-bottom:10px;
+
+    border-left:4px solid #0F4C81;
+
+    padding-left:10px;
+
+    page-break-after:avoid;
+
 }
 
-.cover-project-subtitle {
-    font-size: 14pt;
-    font-weight: 500;
-    color: #555555;
-    margin-top: 20px;
-    line-height: 1.4;
-    padding: 0 0.5cm;
+h3{
+
+    color:#1d5f99;
+
+    font-size:12pt;
+
+    margin-top:18px;
+
+    page-break-after:avoid;
+
 }
 
-.cover-footer {
-    margin-top: auto; /* empurra para o fundo */
-    font-size: 12pt;
-    color: #222222;
-    font-weight: 500;
+/* ==========================================================================
+   PARAGRAPHS
+   ========================================================================== */
+
+p{
+
+    margin-top:0;
+
+    margin-bottom:12px;
+
+    text-indent:1.25cm;
+
 }
 
-.cover-footer p {
-    margin: 3px 0;
+h1+p,
+h2+p,
+h3+p{
+
+    text-indent:0;
+
 }
 
-/* ==========================================================
-   SUMÁRIO (ID 'toc' – minúsculo, compatível com template)
-   ========================================================== */
-#toc {
-    page-break-before: always !important;
-    page-break-after: always !important;
-    padding-top: 0.5cm;
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+
+ul,
+ol{
+
+    margin-top:0;
+
+    margin-bottom:15px;
+
 }
 
-#toc h1 {
-    text-align: left;
-    font-size: 18pt;
-    color: #0F4C81;
-    border-bottom: 2px solid #0F4C81;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    page-break-before: avoid;
+li{
+
+    margin-bottom:4px;
+
 }
 
-#toc ul {
-    list-style: none;
-    padding-left: 0;
+/* ==========================================================================
+   IMAGES
+   ========================================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+    margin:18px auto;
+
 }
 
-#toc li {
-    padding: 6px 0;
-    font-size: 11pt;
-    font-weight: bold;
-    border-bottom: 1px dotted #dddddd;
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    table-layout:fixed;
+
+    margin:20px 0;
+
+    font-size:9pt;
+
+    break-inside:auto;
+
 }
 
-#toc a {
-    color: #0F4C81;
-    text-decoration: none;
+thead{
+
+    display:table-header-group;
+
 }
 
-#toc ul ul {
-    padding-left: 20px;
-    margin-top: 4px;
+tfoot{
+
+    display:table-footer-group;
+
 }
 
-#toc ul ul li {
-    font-weight: normal;
-    font-size: 10.5pt;
-    border-bottom: none;
-    padding: 3px 0;
+tr{
+
+    break-inside:avoid;
+
 }
 
-/* ==========================================================
-   TÍTULOS E DIRETRIZES DE QUEBRA
-   ========================================================== */
-h1, h2, h3, h4 {
-    color: #0F4C81;
-    font-weight: bold;
-    page-break-after: avoid;
+th{
+
+    background:#0F4C81;
+
+    color:white;
+
+    font-weight:bold;
+
 }
 
-h1 {
-    font-size: 17pt;
-    border-bottom: 2px solid #0F4C81;
-    padding-bottom: 6px;
-    margin-top: 1.5cm;
-    margin-bottom: 18px;
-    page-break-before: always;
+th,
+td{
+
+    border:1px solid #0F4C81;
+
+    padding:6px;
+
+    vertical-align:top;
+
+    overflow-wrap:anywhere;
+
+    word-break:break-word;
+
+    hyphens:auto;
+
 }
 
-/* Evita que o primeiro H1 logo após o sumário quebre página desnecessariamente */
-main > h1:first-of-type {
-    page-break-before: avoid !important;
+/* zebra */
+
+tbody tr:nth-child(even){
+
+    background:#f8fbfd;
+
 }
 
-h2 {
-    font-size: 14pt;
-    border-left: 4px solid #0F4C81;
-    padding-left: 10px;
-    margin-top: 25px;
-    margin-bottom: 12px;
-    page-break-before: avoid;
+/* alignment */
+
+th:first-child,
+td:first-child{
+
+    text-align:left;
+
 }
 
-h3 {
-    font-size: 12pt;
-    color: #1F5E99;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    page-break-before: avoid;
+th:not(:first-child),
+td:not(:first-child){
+
+    text-align:center;
+
 }
 
-p {
-    text-align: justify;
-    text-indent: 1.25cm; /* Recuo padrão acadêmico */
-    margin-top: 0;
-    margin-bottom: 12px;
+/* ==========================================================================
+   BLOCKQUOTE
+   ========================================================================== */
+
+blockquote{
+
+    border-left:4px solid #0F4C81;
+
+    background:#f7fbff;
+
+    padding:10px 15px;
+
+    margin:20px 0;
+
+    font-style:italic;
+
 }
 
-/* Remove recuo de parágrafos especiais (capa, sumário, tabelas, blocos) */
-.cover-page p,
-#toc p,
-table p,
-blockquote p,
-h1 + p, h2 + p, h3 + p {
-    text-indent: 0;
+/* ==========================================================================
+   INLINE CODE
+   ========================================================================== */
+
+code{
+
+    font-family:Consolas, monospace;
+
+    background:#f5f5f5;
+
+    padding:2px 4px;
+
+    border-radius:3px;
+
+    color:#c7254e;
+
+    white-space:pre-wrap;
+
 }
 
-/* ==========================================================
-   QUEBRA DE PÁGINA CIRÚRGICA NA SEÇÃO 5 (Arquitetura)
-   ========================================================== */
-#arquitetura-geral,
-#arquitetura,
-h2#arquitetura-geral {
-    page-break-before: always !important;
+/* ==========================================================================
+   CODE BLOCKS
+   ========================================================================== */
+
+pre{
+
+    background:#f5f5f5;
+
+    border-left:4px solid #0F4C81;
+
+    padding:12px;
+
+    overflow-wrap:anywhere;
+
+    white-space:pre-wrap;
+
+    page-break-inside:avoid;
+
 }
 
-/* ==========================================================
-   TABELAS - CORREÇÃO DE MARGENS E BORDAS
-   ========================================================== */
-table {
-    width: 100% !important;
-    max-width: 100% !important;
-    table-layout: auto;
-    border-collapse: collapse !important;
-    margin: 20px 0;
-    font-size: 8.5pt; /* Compacta para caber */
-    page-break-inside: avoid;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+pre code{
+
+    background:none;
+
+    color:#222;
+
+    padding:0;
+
 }
 
-/* Garante bordas visíveis em todas as células */
-th, td {
-    border: 1px solid #0F4C81 !important;
-    padding: 5px 6px;
-    text-align: left;
-    vertical-align: middle;
-    word-break: break-word;
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+a{
+
+    color:#0F4C81;
+
+    text-decoration:none;
+
 }
 
-/* Cabeçalho das tabelas com fundo azul */
-thead {
-    display: table-header-group;
-    background: #0F4C81;
-    color: white;
+a:hover{
+
+    text-decoration:underline;
+
 }
 
-th {
-    font-weight: bold;
-    font-size: 8.5pt;
+/* ==========================================================================
+   HORIZONTAL RULE
+   ========================================================================== */
+
+hr{
+
+    border:none;
+
+    border-top:1px solid #ccc;
+
+    margin:30px 0;
+
 }
 
-/* Linhas alternadas para melhor legibilidade */
-tbody tr:nth-child(even) {
-    background-color: #f8fafd;
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer{
+
+    display:none;
+
 }
 
-/* 
-   Distribuição genérica de larguras para tabelas com 5 colunas 
-   (ex.: Entregas Esperadas). Se a tabela tiver 6 colunas (Cronograma),
-   o ajuste pode ser feito via classes no Markdown ou com seletores
-   baseados na ordem. Para simplificar, usamos uma abordagem genérica:
-   - Primeira coluna: 18%
-   - Segunda: 10%
-   - Terceira: 22%
-   - Quarta: 24%
-   - Quinta: 26%
-   Ajuste os percentuais conforme necessário.
-*/
-table th:nth-child(1), table td:nth-child(1) { width: 18%; }
-table th:nth-child(2), table td:nth-child(2) { width: 10%; text-align: center; }
-table th:nth-child(3), table td:nth-child(3) { width: 22%; }
-table th:nth-child(4), table td:nth-child(4) { width: 24%; }
-table th:nth-child(5), table td:nth-child(5) { width: 26%; }
+/* ==========================================================================
+   PRINT HELPERS
+   ========================================================================== */
 
-/* Se a tabela tiver 6 colunas (Cronograma), sobrescreva com estas larguras */
-table th:nth-child(6), table td:nth-child(6) {
-    width: 15%; /* A sexta coluna só existirá se houver 6 */
-}
-/* E redistribua as demais quando houver 6 colunas */
-table th:nth-child(1):nth-last-child(6),
-table td:nth-child(1):nth-last-child(6) { width: 8%; }
-table th:nth-child(2):nth-last-child(5),
-table td:nth-child(2):nth-last-child(5) { width: 14%; }
-table th:nth-child(3):nth-last-child(4),
-table td:nth-child(3):nth-last-child(4) { width: 30%; }
-table th:nth-child(4):nth-last-child(3),
-table td:nth-child(4):nth-last-child(3) { width: 16%; }
-table th:nth-child(5):nth-last-child(2),
-table td:nth-child(5):nth-last-child(2) { width: 17%; }
-table th:nth-child(6):nth-last-child(1),
-table td:nth-child(6):nth-last-child(1) { width: 15%; }
+figure,
+table,
+pre,
+blockquote{
 
-/* ==========================================================
-   ELEMENTOS DE CÓDIGO E BLOCOS
-   ========================================================== */
-code {
-    font-family: "Consolas", Courier, monospace;
-    background: #f4f6f8;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-size: 8.5pt;
-    color: #c7254e;
+    page-break-inside:avoid;
+
 }
 
-pre {
-    background: #f4f6f8;
-    border-left: 4px solid #0F4C81;
-    padding: 10px;
-    margin: 15px 0;
-    border-radius: 4px;
-    page-break-inside: avoid;
+h1,
+h2,
+h3{
+
+    page-break-after:avoid;
+
 }
 
-pre code {
-    background: none;
-    color: #222222;
-    padding: 0;
-    font-size: 8pt;
-}
+img{
 
-blockquote {
-    border-left: 4px solid #0F4C81;
-    background: #f8fbff;
-    padding: 10px 15px;
-    margin: 15px 0;
-    color: #444444;
-    font-style: italic;
-    page-break-inside: avoid;
-}
+    page-break-inside:avoid;
 
-ul, ol {
-    margin-bottom: 12px;
-    padding-left: 25px;
-}
-
-li {
-    margin-bottom: 4px;
-}
-
-footer {
-    display: none;
 }

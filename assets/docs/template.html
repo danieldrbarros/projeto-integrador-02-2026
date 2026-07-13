@@ -1,50 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="$lang$">
+
 <head>
+
     <meta charset="utf-8">
-    <title>$title$</title>
-    $if(author)$
-    <meta name="author" content="$author$">
-    $endif$
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+
+$if(author-meta)$
+    <meta name="author" content="$author-meta$">
+$endif$
+
+$if(date-meta)$
+    <meta name="date" content="$date-meta$">
+$endif$
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <div class="cover-page">
-        <div class="cover-content">
-            <div class="cover-institution">
-                <p class="cover-project-title"><center><b>PONTIFÍCIA UNIVERSIDADE CATÓLICA DE SÃO PAULO</b></center></p>
-                <p class="cover-project-title"><center>Curso de Especialização em Inteligência Artificial</center></p>
-            </div>
-            
-            <div class="cover-divider">
-                <hr>
-            </div>
-            
-            <div class="cover-project">
-                <p class="cover-project-title"><center><b>Projeto Integrador II:</b></center></p>
-                <p class="cover-project-title"><center>Aplicação de Deep Learning</center></p>
-            </div>
-            
-            <div class="cover-divider">
-                <hr>
-            </div>
+<!-- ===================================================== -->
+<!-- COVER PAGE -->
+<!-- ===================================================== -->
+
+<header class="cover-page">
+
+    <div class="cover-content">
+
+        <div class="cover-institution">
+
+            <h1 class="cover-title-main">
+                PONTIFÍCIA UNIVERSIDADE CATÓLICA DE SÃO PAULO
+            </h1>
+
+            <h2 class="cover-title-secondary">
+                Curso de Especialização em Inteligência Artificial
+            </h2>
+
         </div>
+
+        <div class="cover-divider">
+            <hr>
+        </div>
+
+        <div class="cover-project">
+
+$if(title)$
+
+            <h1 class="cover-project-title">
+                $title$
+            </h1>
+
+$else$
+
+            <h1 class="cover-project-title">
+                Projeto Integrador II
+            </h1>
+
+$endif$
+
+$if(subtitle)$
+
+            <p class="cover-project-subtitle">
+                $subtitle$
+            </p>
+
+$endif$
+
+        </div>
+
+        <div class="cover-divider">
+            <hr>
+        </div>
+
+        <div class="cover-footer">
+
+$if(author)$
+
+            <p>$for(author)$$author$$sep$<br>$endfor$</p>
+
+$endif$
+
+$if(date)$
+
+            <p>$date$</p>
+
+$endif$
+
+        </div>
+
     </div>
 
-    $if(toc)$
-    <br>
-    <nav id="TOC">
-        <h1>Sumário</h1>
-        $toc$
-    </nav>
-    <br>
-    $endif$
+</header>
 
-    <main>
-        $body$
-    </main>
+<!-- ===================================================== -->
+<!-- TABLE OF CONTENTS -->
+<!-- ===================================================== -->
+
+$if(toc)$
+
+<nav id="toc">
+
+<h1>Sumário</h1>
+
+$toc$
+
+</nav>
+
+$endif$
+
+<!-- ===================================================== -->
+<!-- MAIN CONTENT -->
+<!-- ===================================================== -->
+
+<main>
+
+$body$
+
+</main>
 
 </body>
+
 </html>
