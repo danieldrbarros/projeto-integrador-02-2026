@@ -471,3 +471,11 @@ img{
     page-break-inside:avoid;
 
 }
+
+.header-section-number::after {
+    content: " - ";
+}
+
+.toc-section-number::after {
+    content: " - ";
+}
