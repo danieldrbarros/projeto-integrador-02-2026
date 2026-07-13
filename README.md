@@ -1,4 +1,4 @@
-## 1. Sobre o Projeto
+## Sobre o Projeto
 
 O Projeto Integrador tem como objetivo agregar os conhecimentos desenvolvidos nas disciplinas da Pós-Graduação em Inteligência Artificial por meio da construção de uma solução baseada em Inteligência Artificial aplicada a um problema real.
 
@@ -6,7 +6,6 @@ Durante o semestre, os estudantes desenvolverão incrementalmente um **Sistema I
 
 Todo o desenvolvimento deverá ser realizado em equipes utilizando GitHub como ferramenta de gerenciamento do projeto.
 
-### 
 
 |  |  |
 |------------|---------|
@@ -21,9 +20,9 @@ Todo o desenvolvimento deverá ser realizado em equipes utilizando GitHub como f
 
 ---
 
-## 2. Objetivos
+## Objetivos
 
-### 2.1. Objetivos de Aprendizagem
+### Objetivos de Aprendizagem
 
 Ao final do Projeto Integrador espera-se que os estudantes sejam capazes de:
 
@@ -36,7 +35,7 @@ Ao final do Projeto Integrador espera-se que os estudantes sejam capazes de:
 7. Documentar adequadamente um projeto de IA;
 8. Apresentar tecnicamente uma solução completa.
 
-### 2.2. Objetivos Pedagógicos
+### Objetivos Pedagógicos
 
 Ao final do projeto espera-se que os estudantes sejam capazes de:
 
