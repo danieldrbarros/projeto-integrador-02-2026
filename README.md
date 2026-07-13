@@ -51,15 +51,13 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 
 ## 3. Disciplinas Envolvidas
 
-![](assets/images/disciplinas.png)
-<!-- 
+<!-- ![](assets/images/disciplinas.png) --> 
 | Sigla | Disciplina | Professor |
 |-------|------------|-----------|
 | **BD** | Big Data e Engenharia de Dados | Daniel Carvalho |
 | **PLN** | Processamento de Linguagem Natural | Gabriel Santos |
 | **VC** | Visão Computacional | Silvio Stanzani |
 | **DL** | Fundamentos de Deep Learning | Daniel Barros |
--->
 
 ---
 

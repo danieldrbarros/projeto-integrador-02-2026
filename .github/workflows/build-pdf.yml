@@ -16,7 +16,6 @@ permissions:
   contents: write
 
 jobs:
-
   build-pdf:
 
     runs-on: ubuntu-latest
@@ -116,17 +115,10 @@ jobs:
             README.pdf
 
       ######################################################################
-      # Upload artifact
+      # Commit README.pdf
       ######################################################################
-
-      - name: Upload PDF
-
-        uses: actions/upload-artifact@v4
-
+      - name: Commit README.pdf
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-
-          name: README-PDF
-
-          path: README.pdf
-
-          if-no-files-found: error
+          commit_message: "docs: update README.pdf"
+          file_pattern: README.pdf
