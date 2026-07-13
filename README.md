@@ -154,14 +154,14 @@ Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professo
 
 | Data | Objetivo | Professor(es) | Marco | Notebook |
 |:----------:|------------------|---------------|------------------|-------------------|
-| **18/07** | Apresentar, formar grupos, dataset e ambiente. | Todos / **DL+BD** | Planejamento | **01_Exploracao** |
-| **25/07** | Pipeline ETL (limpeza, transformação, partição). | **BD+DL** | Dados preparados | **02_Engenharia_Dados** |
-| **08/08** | Primeiro modelo DL (MLP baseline). | **DL** | Modelo treinado | **03_Deep_Learning** |
-| **22/08** | Módulo PLN para descrições textuais. | **PLN+DL** | PLN concluído | **04_PLN** |
-| **05/09** | Módulo VC para imagens anexadas. | **VC+DL** | VC concluído | **05_Visao_Computacional** |
-| **19/09** | Integrar modelos de texto e imagem (multimodal). | **DL+PLN+VC** | Multimodal integrado | **06_Modelo_Multimodal** |
-| **03/10** | Consolidar, pipeline de inferência, escalabilidade. | **BD+DL** | Sistema integrado | **07_Pipeline_Final** |
-| **17/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto Final** |
+| **18/7** | Apresentar, formar grupos, dataset e ambiente. | Todos / **DL+BD** | Planejamento | **1_Exploracao** |
+| **25/7** | Pipeline ETL (limpeza, transformação, partição). | **BD+DL** | Dados preparados | **2_Engenharia_Dados** |
+| **8/8** | Primeiro modelo DL (MLP baseline). | **DL** | Modelo treinado | **3_Deep_Learning** |
+| **22/8** | Módulo PLN para descrições textuais. | **PLN+DL** | PLN concluído | **4_PLN** |
+| **5/9** | Módulo VC para imagens anexadas. | **VC+DL** | VC concluído | **5_Visao_Computacional** |
+| **19/9** | Integrar modelos de texto e imagem (multimodal). | **DL+PLN+VC** | Multimodal integrado | **6_Modelo_Multimodal** |
+| **3/10** | Consolidar, pipeline de inferência, escalabilidade. | **BD+DL** | Sistema integrado | **7_Pipeline_Final** |
+| **17/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto_Final** |
 
 ### Entregas Esperadas
 
@@ -169,14 +169,14 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 
 | Notebook | Objetivo | Competências | Conteúdo |
 |----------|----------|----------------------------|-------------------|
-| **01_Exploracao** | Planejar e<br>compreender o<br>problema. | Planejamento, trabalho em equipe, EDA e arquitetura. | Descrição, [dataset](/materiais/dataset/README.md), EDA, arquitetura inicial e planejamento. |
-| **02_Engenharia_Dados** | Preparar dados<br>para os modelos. | Engenharia de Dados, ETL e preparação. | Ingestão, limpeza, transformação, partição treino/validação/teste e documentação. |
-| **03_Deep_Learning** | Desenvolver o<br>primeiro modelo DL. | Redes neurais, treino supervisionado, avaliação. | MLP baseline, treino, ajuste de hiperparâmetros, avaliação e discussão. |
-| **04_PLN** | Desenvolver o<br>módulo PLN. | Pré‑processamento de textos, embeddings, classificação. | Limpeza, embeddings, treino do modelo PLN, avaliação. |
-| **05_Visao_Computacional** | Desenvolver o<br>módulo VC. | Processamento de imagens, CNNs, Transfer Learning. | Preparação das imagens, CNN/Transfer Learning, avaliação. |
-| **06_Modelo_Multimodal** | Integrar texto e<br>imagem em uma<br>solução única. | Modelagem multimodal, fusão de embeddings, comparação. | Early/Late Fusion, treino multimodal, avaliação comparativa e discussão. |
-| **07_Pipeline_Final** | Consolidar a<br>solução do grupo. | Engenharia de IA, pipelines, documentação, implantação. | Pipeline de inferência, organização, documentação, avaliação final e limitações. |
-| **Projeto Final** | Apresentar e<br>defender a<br>solução. | Comunicação técnica, integração, colaboração, apresentação. | Repositório, notebooks, relatório técnico (2p), apresentação (15 min) e demo. |
+| **1_Exploracao** | Planejar e<br>compreender o<br>problema. | Planejamento, trabalho em equipe, EDA e arquitetura. | Descrição, [dataset](/materiais/dataset/README.md), EDA, arquitetura inicial e planejamento. |
+| **2_Engenharia_Dados** | Preparar dados<br>para os modelos. | Engenharia de Dados, ETL e preparação. | Ingestão, limpeza, transformação, partição treino/validação/teste e documentação. |
+| **3_Deep_Learning** | Desenvolver o<br>primeiro modelo DL. | Redes neurais, treino supervisionado, avaliação. | MLP baseline, treino, ajuste de hiperparâmetros, avaliação e discussão. |
+| **4_PLN** | Desenvolver o<br>módulo PLN. | Pré‑processamento de textos, embeddings, classificação. | Limpeza, embeddings, treino do modelo PLN, avaliação. |
+| **5_Visao_Computacional** | Desenvolver o<br>módulo VC. | Processamento de imagens, CNNs, Transfer Learning. | Preparação das imagens, CNN/Transfer Learning, avaliação. |
+| **6_Modelo_Multimodal** | Integrar texto e<br>imagem em uma<br>solução única. | Modelagem multimodal, fusão de embeddings, comparação. | Early/Late Fusion, treino multimodal, avaliação comparativa e discussão. |
+| **7_Pipeline_Final** | Consolidar a<br>solução do grupo. | Engenharia de IA, pipelines, documentação, implantação. | Pipeline de inferência, organização, documentação, avaliação final e limitações. |
+| **Projeto_Final** | Apresentar e<br>defender a<br>solução. | Comunicação técnica, integração, colaboração, apresentação. | Repositório, notebooks, relatório técnico (2p), apresentação (15 min) e demo. |
 
 ---
 
@@ -285,23 +285,23 @@ O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
 Sim.
 
-### Podemos utilizar PyTorch?
+- Podemos utilizar PyTorch?
 
 Sim.
 
-### Podemos utilizar outros modelos além dos apresentados em aula?
+- Podemos utilizar outros modelos além dos apresentados em aula?
 
 Sim, desde que devidamente documentados.
 
-### Podemos utilizar bibliotecas adicionais?
+- Podemos utilizar bibliotecas adicionais?
 
 Sim.
 
-### Podemos utilizar Inteligência Artificial Generativa?
+- Podemos utilizar Inteligência Artificial Generativa?
 
 Sim, desde que o uso seja informado e documentado no relatório técnico.
 
-### Podemos utilizar outro dataset?
+- Podemos utilizar outro dataset?
 
 Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores. Embora o dataset disponibilizado possua tamanho reduzido para fins didáticos, espera-se que as soluções sejam desenvolvidas utilizando técnicas compatíveis com ambientes Big Data. Grupos interessados poderão gerar versões ampliadas do dataset para avaliação de escalabilidade.
 
@@ -309,31 +309,31 @@ Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos 
 
 ## Referências Bibliográficas
 
-[1] ZHANG, Aston et al. Dive into Deep Learning. 2024. Disponível em: https://d2l.ai/index.html. Acesso em: 17 set.2025.
+1. ZHANG, Aston et al. Dive into Deep Learning. 2024. Disponível em: https://d2l.ai/index.html. Acesso em: 17 set.2025.
 
-[2] CHOLLET, François. Deep Learning with Python. Greenwich: Manning Publications, 2018.
+2. CHOLLET, François. Deep Learning with Python. Greenwich: Manning Publications, 2018.
 
-[3] BIRD, Steven; KLEIN, Ewan; LOPER, Edward. Natural Language Processing with Python. Sebastopol: O’Reilly
+3. BIRD, Steven; KLEIN, Ewan; LOPER, Edward. Natural Language Processing with Python. Sebastopol: O’Reilly
 Media, 2009.
 
-[4] SILGE, Julia; ROBINSON, David. Text Mining with R. Sebastopol: O’Reilly Media, 2017.
+4. SILGE, Julia; ROBINSON, David. Text Mining with R. Sebastopol: O’Reilly Media, 2017.
 
-[5] FORSYTH, David A.; PONCE, Jean. Computer Vision: A Modern Approach. 2. ed. Boston: Pearson, 2011.
+5. FORSYTH, David A.; PONCE, Jean. Computer Vision: A Modern Approach. 2. ed. Boston: Pearson, 2011.
 
-[6] SZELISKI, Richard. Computer Vision: Algorithms and Applications. New York: Springer, 2010.
+6. SZELISKI, Richard. Computer Vision: Algorithms and Applications. New York: Springer, 2010.
 
-[7] CHAMBERS, Bill; ZAHARIA, Matei. Spark: The Definitive Guide: Big Data Processing Made Simple. Sebastopol:
+7. CHAMBERS, Bill; ZAHARIA, Matei. Spark: The Definitive Guide: Big Data Processing Made Simple. Sebastopol:
 O’Reilly Media, 2018.
 
-[8] LAKSHMANAN, Valliappa; ROBINSON, Sara; MUNN, Michael. Machine Learning Design Patterns: Solutions to
+8. LAKSHMANAN, Valliappa; ROBINSON, Sara; MUNN, Michael. Machine Learning Design Patterns: Solutions to
 Common Challenges in Machine Learning. Sebastopol: O’Reilly Media, 2020.
 
-[9] TREVEIL, Mark et al. Introducing MLOps: How to Scale Machine Learning in the Enterprise. Sebastopol: O’Reilly
+9. TREVEIL, Mark et al. Introducing MLOps: How to Scale Machine Learning in the Enterprise. Sebastopol: O’Reilly
 Media, 2020.
 
-[10] GÉRON, Aurélien. Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow. 2. ed. Sebastopol:
+10. GÉRON, Aurélien. Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow. 2. ed. Sebastopol:
 O’Reilly Media, 2019.
 
-[11] ROSEBROCK, Adrian. Deep Learning for Computer Vision with Python. PyImageSearch, 2017.
+11. ROSEBROCK, Adrian. Deep Learning for Computer Vision with Python. PyImageSearch, 2017.
 
 ---
