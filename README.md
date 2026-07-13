@@ -18,7 +18,6 @@ Todo o desenvolvimento deverá ser realizado em equipes utilizando GitHub como f
 | **Ferramentas**: | Python, Jupyter, TensorFlow, Scikit-learn |
 | **Entrega final**: | Apresentação do projeto + código documentado |
 
----
 
 ## Objetivos
 
@@ -46,11 +45,9 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 - Documentar adequadamente seus experimentos;
 - Apresentar resultados técnicos de forma clara e objetiva.
 
----
 
 ## Disciplinas Envolvidas
 
-<!-- ![](assets/images/disciplinas.png) --> 
 | Sigla | Disciplina | Professor |
 |-------|------------|-----------|
 | **BD** | Big Data e Engenharia de Dados | Daniel Carvalho |
@@ -58,7 +55,6 @@ Ao final do projeto espera-se que os estudantes sejam capazes de:
 | **VC** | Visão Computacional | Silvio Stanzani |
 | **DL** | Fundamentos de Deep Learning | Daniel Barros |
 
----
 
 ## Tema do Projeto
 
@@ -98,7 +94,6 @@ Embora o sistema possa contemplar diferentes funcionalidades, o **objetivo princ
 
 As demais funcionalidades (predição de prioridade, estimativa do tempo de resolução, identificação de reincidências e sugestão da equipe responsável) representam extensões naturais da solução e poderão ser exploradas pelos grupos conforme a evolução do projeto e os conteúdos desenvolvidos nas disciplinas participantes.
 
----
 
 ## Arquitetura Geral
 
@@ -131,7 +126,6 @@ As demais funcionalidades (predição de prioridade, estimativa do tempo de reso
 ```
 -->
 
----
 
 ## Organização entre os Professores
 
@@ -143,7 +137,6 @@ Espera-se que cada disciplina produza um componente que será incorporado ao sis
 
 Recomenda-se que os professores mantenham reuniões rápidas de alinhamento sempre que necessário para acompanhar a evolução dos grupos e garantir a integração entre as etapas.
 
----
 
 ## Cronograma
 
@@ -153,8 +146,6 @@ Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professo
 
 ### Cronograma das Aulas
 
-<img src="assets/images/cronograma-aulas.png" width="110%">
-<!-- 
 | Data | Objetivo | Professor(es) | Marco | Notebook |
 |:----------:|------------------|---------------|------------------|-------------------|
 | **18/07** | Apresentar, formar grupos, dataset e ambiente. | Todos / **DL+BD** | Planejamento | **01_Exploracao** |
@@ -165,14 +156,11 @@ Todos os grupos utilizarão o **mesmo dataset oficial**, definido pelos professo
 | **19/09** | Integrar modelos de texto e imagem (multimodal). | **DL+PLN+VC** | Multimodal integrado | **06_Modelo_Multimodal** |
 | **03/10** | Consolidar, pipeline de inferência, escalabilidade. | **BD+DL** | Sistema integrado | **07_Pipeline_Final** |
 | **17/10** | Apresentação final, demo e avaliação. | **Todos** | Projeto concluído | **Projeto Final** |
--->
 
 ### Entregas Esperadas
 
 Cada notebook representa uma etapa incremental da construção da solução. Ao final do semestre, todos os notebooks deverão compor um único repositório GitHub organizado, documentado e reproduzível.
 
-<img src="assets/images/cronograma-entregas.png" width="110%">
-<!--
 | Notebook | Objetivo | Competências | Conteúdo |
 |----------|----------|----------------------------|-------------------|
 | **01_Exploracao** | Planejar e<br>compreender o<br>problema. | Planejamento, trabalho em equipe, EDA e arquitetura. | Descrição, [dataset](/materiais/dataset/README.md), EDA, arquitetura inicial e planejamento. |
@@ -183,9 +171,7 @@ Cada notebook representa uma etapa incremental da construção da solução. Ao 
 | **06_Modelo_Multimodal** | Integrar texto e<br>imagem em uma<br>solução única. | Modelagem multimodal, fusão de embeddings, comparação. | Early/Late Fusion, treino multimodal, avaliação comparativa e discussão. |
 | **07_Pipeline_Final** | Consolidar a<br>solução do grupo. | Engenharia de IA, pipelines, documentação, implantação. | Pipeline de inferência, organização, documentação, avaliação final e limitações. |
 | **Projeto Final** | Apresentar e<br>defender a<br>solução. | Comunicação técnica, integração, colaboração, apresentação. | Repositório, notebooks, relatório técnico (2p), apresentação (15 min) e demo. |
--->
 
----
 
 ## Produto Final
 
@@ -197,7 +183,6 @@ Cada grupo deverá entregar:
 - Apresentação final (15 minutos);
 - Demonstração da solução.
 
----
 
 ## Critérios de Avaliação
 
@@ -217,7 +202,6 @@ Cada grupo deverá entregar:
 
 De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 (sete) no Projeto Integrador para aprovação no Módulo II. Frequência mínima exigida: 75%.
 
----
 
 ## Tecnologias Sugeridas
 
@@ -233,7 +217,6 @@ De acordo com o regulamento do curso, o aluno deverá obter nota mínima de 7,0 
 - OpenCV
 - Apache Spark
 
----
 
 ## Estrutura Esperada dos Repositórios dos Grupos
 
@@ -260,7 +243,6 @@ grupo-XX/
 └── .gitignore
 ```
 
----
 
 ## Organização do Projeto
 
@@ -274,7 +256,6 @@ Recomenda-se:
 - Documentação contínua do progresso;
 - Versionamento adequado dos notebooks.
 
----
 
 ## Considerações Finais e Ética
 
@@ -285,7 +266,6 @@ O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 - **Transparência**: Todo o código, dados e metodologia estarão disponíveis publicamente no GitHub, garantindo reprodutibilidade.
 - **Finalidade**: O projeto tem fins exclusivamente acadêmicos e visa contribuir para o aprendizado e desenvolvimento de habilidades em IA.
 
----
 
 ## FAQ
 
@@ -313,7 +293,6 @@ Sim, desde que o uso seja informado e documentado no relatório técnico.
 
 Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores. Embora o dataset disponibilizado possua tamanho reduzido para fins didáticos, espera-se que as soluções sejam desenvolvidas utilizando técnicas compatíveis com ambientes Big Data. Grupos interessados poderão gerar versões ampliadas do dataset para avaliação de escalabilidade.
 
----
 
 ## Referências Bibliográficas
 
@@ -344,4 +323,3 @@ O’Reilly Media, 2019.
 
 [11] ROSEBROCK, Adrian. Deep Learning for Computer Vision with Python. PyImageSearch, 2017.
 
----

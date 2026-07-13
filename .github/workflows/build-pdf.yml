@@ -97,7 +97,6 @@ jobs:
             --toc \
             --number-sections \
             --metadata title="Projeto Integrador II" \
-            --metadata date="$(date '+%Y')" \
             --template assets/docs/template.html \
             --css assets/docs/style.css \
             --output=README.html

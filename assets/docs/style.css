@@ -122,6 +122,10 @@ body{
 
 }
 
+#toc ul ul {
+    padding-left: 1.5em;   
+}
+
 #toc li{
 
     margin:5px 0;
