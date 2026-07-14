@@ -243,11 +243,11 @@ grupo-XX/
 │   ├── 01_Exploracao.ipynb
 │   ├── 02_Engenharia_Dados.ipynb
 │   ├── 03_Deep_Learning.ipynb
-│   ├── 04_PLN.ipynb
-│   ├── 05_Visao_Computacional.ipynb
+│   ├── 04_Visao_Computacional.ipynb
+│   ├── 05_PLN.ipynb
 │   ├── 06_Modelo_Multimodal.ipynb
 │   └── 07_Pipeline_Final.ipynb
-│   └── 07_Projeto_Final.ipynb
+│   └── Projeto_Final.ipynb
 ├── models/
 ├── reports/
 ├── presentation/
