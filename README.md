@@ -190,8 +190,8 @@ Cada grupo deverá entregar:
 - Apresentação final (15 minutos);
 - Demonstração da solução.
 
-*Não é necessário fazer DOCX ou PPTX, pois o projeto deve ser entregue em formato notebook .ipynb no GitHub*
- 
+*Os entregáveis deverão ser disponibilizados no GitHub. O relatório técnico poderá ser apresentado em formato Markdown (.md) ou Notebook (.ipynb), não sendo necessária a entrega em DOCX ou PPTX.*
+
 
 ---
 
@@ -293,7 +293,7 @@ O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
 Podemos utilizar TensorFlow? **Sim**.
 
-Podemos utilizar PyTorch? **Sim, mas preferencialmnente use o TensorFlow**.
+Podemos utilizar PyTorch? **Sim, mas preferencialmente use o TensorFlow**.
 
 Podemos utilizar outros modelos além dos apresentados em aula? **Sim, desde que devidamente documentados.**
 
