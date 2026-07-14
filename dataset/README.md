@@ -89,8 +89,8 @@ O arquivo possui **40 colunas** (listadas abaixo) e a coluna `target_category` (
 ```python
 import pandas as pd
 
-df = pd.read_csv('chamados_enriquecido.csv')
-print(df.shape)   # (5000, 40)
+df = pd.read_csv('raw/chamados_enriquecido.csv')
+print(df.shape)  # (5000, 40)
 df.head()
 ```
 

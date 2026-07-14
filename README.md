@@ -293,7 +293,7 @@ O desenvolvimento deste projeto deve considerar aspectos éticos importantes:
 
 Podemos utilizar TensorFlow? **Sim**.
 
-Podemos utilizar PyTorch? **Sim**.
+Podemos utilizar PyTorch? **Sim, mas preferencialmnente use o TensorFlow**.
 
 Podemos utilizar outros modelos além dos apresentados em aula? **Sim, desde que devidamente documentados.**
 
@@ -301,7 +301,7 @@ Podemos utilizar bibliotecas adicionais? **Sim.**
 
 Podemos utilizar Inteligência Artificial Generativa? **Sim, desde que o uso seja informado e documentado no relatório técnico.**
 
-Podemos utilizar outro dataset? **Não. Todos os grupos deverão utilizar o dataset oficial disponibilizado pelos professores. Embora o dataset disponibilizado possua tamanho reduzido para fins didáticos, espera-se que as soluções sejam desenvolvidas utilizando técnicas compatíveis com ambientes Big Data. Grupos interessados poderão gerar versões ampliadas do dataset para avaliação de escalabilidade.**
+Podemos utilizar outro dataset? **Sim. É permitido utilizar um dataset diferente, desde que seja baseado no dataset oficial disponibilizado pelos professores, preservando seu contexto e estrutura para atender aos objetivos do projeto.**
 
 ---
 
