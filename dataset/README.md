@@ -1,4 +1,4 @@
-# 📊 Dataset de Chamados de Suporte
+# 📊 Dataset
 
 Este dataset (`chamados.csv`) contém **5.000 registros** de chamados de suporte, com informações detalhadas sobre cada ticket, dados do cliente, métricas do histórico e a categoria final do chamado. Foi preparado para fins de análise exploratória e modelagem de classificação.
 
